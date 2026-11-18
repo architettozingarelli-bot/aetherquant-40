@@ -1,0 +1,31 @@
+{
+  "mode": "paper",
+  "exchange_used": "kraken",
+  "initial_capital_eur": 40.0,
+  "trading_cash_eur": 40.0,
+  "bot_vault_eur": 0.0,
+  "cumulative_realized_net_pnl_eur": 0.0,
+  "high_water_mark_pnl_eur": 0.0,
+  "cumulative_user_profit_eur": 0.0,
+  "peak_user_equity_eur": 40.0,
+  "cycle_count": 0,
+  "current_tier": 1,
+  "current_tier_name": "Seed Explorer",
+  "last_regime_summary": "IN_ATTESA_PRIMO_CICLO",
+  "last_selected_strategy": "Auto-Calibrazione Walk-Forward pronta",
+  "last_run_at": null,
+  "last_optimized_at": null,
+  "positions": {},
+  "trade_history": [],
+  "equity_curve": [
+    {
+      "timestamp": "2026-11-17T20:00:00+00:00",
+      "total_equity_eur": 40.0,
+      "user_equity_eur": 40.0,
+      "bot_vault_eur": 0.0,
+      "trading_cash_eur": 40.0,
+      "invested_eur": 0.0,
+      "regime_summary": "INITIAL_SEED"
+    }
+  ]
+}

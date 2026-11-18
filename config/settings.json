@@ -1,0 +1,59 @@
+{
+  "bot_name": "AetherQuant-40",
+  "version": "1.0.0",
+  "initial_capital_eur": 40.0,
+  "quote_currency": "EUR",
+  "primary_exchange": "kraken",
+  "fallback_exchanges": ["coinbase", "kucoin", "bybit", "binance"],
+  "candidate_symbols": [
+    "BTC/EUR",
+    "ETH/EUR",
+    "SOL/EUR",
+    "XRP/EUR",
+    "ADA/EUR",
+    "LINK/EUR"
+  ],
+  "timeframe": "1h",
+  "candle_limit": 500,
+  "fee_rate": 0.0016,
+  "slippage_rate": 0.0005,
+  "bot_profit_share_pct": 0.10,
+  "optimize_every_n_cycles": 6,
+  "risk": {
+    "min_order_eur": 11.0,
+    "base_max_positions": 2,
+    "max_position_pct": 0.45,
+    "cash_reserve_pct": 0.10,
+    "max_risk_per_trade_pct": 0.025,
+    "min_net_reward_pct": 0.018,
+    "min_reward_to_risk": 1.6,
+    "max_drawdown_defensive_pct": 0.12,
+    "max_holding_hours": 120
+  },
+  "self_improvement_tiers": [
+    {
+      "tier": 1,
+      "name": "Seed Explorer",
+      "min_vault_eur": 0.0,
+      "grid_combinations": 12,
+      "max_symbols_scanned": 4,
+      "description": "Scansione base sui top 4 asset EUR e griglia rapida walk-forward."
+    },
+    {
+      "tier": 2,
+      "name": "Adaptive Quant",
+      "min_vault_eur": 1.5,
+      "grid_combinations": 27,
+      "max_symbols_scanned": 6,
+      "description": "Sbloccato con 1.50€ nel Fondo Bot: espande universo a 6 asset e ricerca parametrica multi-regime."
+    },
+    {
+      "tier": 3,
+      "name": "Autonomous Alpha",
+      "min_vault_eur": 5.0,
+      "grid_combinations": 48,
+      "max_symbols_scanned": 8,
+      "description": "Sbloccato con 5.00€ nel Fondo Bot: mutazione evolutiva profonda, filtro multi-timeframe e compounding dinamico."
+    }
+  ]
+}

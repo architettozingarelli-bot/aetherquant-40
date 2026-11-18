@@ -1,0 +1,126 @@
+name: AetherQuant-40 Autonomous Bot
+
+on:
+  schedule:
+    # Esegue ogni ora al minuto :05 (subito dopo la chiusura della candela oraria :00)
+    - cron: '5 * * * *'
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: 'Modalità operativa (paper = simulazione su prezzi reali, live = ordini reali)'
+        required: false
+        default: ''
+        type: choice
+        options:
+          - ''
+          - 'paper'
+          - 'live'
+      force_optimize:
+        description: 'Forza ricalibrazione evolutiva Walk-Forward dei parametri'
+        required: false
+        default: false
+        type: boolean
+      reset_portfolio:
+        description: 'Resetta il portafoglio simulato a 40.00€ puliti prima del ciclo'
+        required: false
+        default: false
+        type: boolean
+
+concurrency:
+  group: aetherquant-40-state
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  trade-and-evolve:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+
+      - name: Install Dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run Safety & Accounting Unit Tests
+        run: pytest -q
+
+      - name: Optional Portfolio Reset (40 EUR)
+        if: ${{ github.event_name == 'workflow_dispatch' && inputs.reset_portfolio == true }}
+        run: |
+          python - <<'PY'
+          import json
+          from datetime import datetime, timezone
+          from pathlib import Path
+
+          now = datetime.now(timezone.utc).isoformat()
+          state = {
+              "mode": "paper",
+              "exchange_used": "kraken",
+              "initial_capital_eur": 40.0,
+              "trading_cash_eur": 40.0,
+              "bot_vault_eur": 0.0,
+              "cumulative_realized_net_pnl_eur": 0.0,
+              "high_water_mark_pnl_eur": 0.0,
+              "cumulative_user_profit_eur": 0.0,
+              "peak_user_equity_eur": 40.0,
+              "cycle_count": 0,
+              "current_tier": 1,
+              "current_tier_name": "Seed Explorer",
+              "last_regime_summary": "RESET",
+              "last_selected_strategy": "Reset a 40.00 EUR",
+              "last_run_at": now,
+              "last_optimized_at": None,
+              "positions": {},
+              "trade_history": [],
+              "equity_curve": [{
+                  "timestamp": now,
+                  "total_equity_eur": 40.0,
+                  "user_equity_eur": 40.0,
+                  "bot_vault_eur": 0.0,
+                  "trading_cash_eur": 40.0,
+                  "invested_eur": 0.0,
+                  "regime_summary": "RESET",
+              }],
+          }
+          Path("data/state.json").write_text(json.dumps(state, indent=2) + "\n", encoding="utf-8")
+          print("Portafoglio resettato a 40.00 EUR.")
+          PY
+
+      - name: Execute Autonomous Trading & Self-Optimization Cycle
+        env:
+          TRADING_MODE: ${{ inputs.mode != '' && inputs.mode || vars.TRADING_MODE || 'paper' }}
+          EXCHANGE_ID: ${{ secrets.EXCHANGE_ID || vars.EXCHANGE_ID || 'kraken' }}
+          EXCHANGE_API_KEY: ${{ secrets.EXCHANGE_API_KEY }}
+          EXCHANGE_API_SECRET: ${{ secrets.EXCHANGE_API_SECRET }}
+          EXCHANGE_PASSWORD: ${{ secrets.EXCHANGE_PASSWORD }}
+        run: |
+          OPT_FLAG=""
+          if [ "${{ inputs.force_optimize }}" = "true" ]; then
+            OPT_FLAG="--force-optimize"
+          fi
+          python -m src.bot --mode "$TRADING_MODE" $OPT_FLAG
+
+      - name: Commit Updated State & Dashboard Telemetry
+        run: |
+          git config user.name "aetherquant-bot[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/state.json data/strategy_genome.json docs/dashboard_data.json docs/dashboard_data.js
+          if git diff --staged --quiet; then
+            echo "Nessuna modifica allo stato da salvare."
+          else
+            git commit -m "chore(bot): update portfolio state & self-learning genome [skip ci]"
+            git pull --rebase -X theirs origin "${GITHUB_REF_NAME}"
+            git push origin "HEAD:${GITHUB_REF_NAME}"
+          fi

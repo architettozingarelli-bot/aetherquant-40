@@ -1,0 +1,9 @@
+{
+  "generation": 0,
+  "updated_at": null,
+  "grid_combinations_used": 12,
+  "assets": {},
+  "recent_optimization_notes": [
+    "Genoma iniziale pronto: al primo ciclo su GitHub Actions eseguirà la calibrazione Walk-Forward sui dati reali EUR."
+  ]
+}

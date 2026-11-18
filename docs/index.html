@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AetherQuant-40 | Autonomous Self-Funding Bot</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
+  <script src="./dashboard_data.js"></script>
+  <style>
+    :root {
+      --bg: #0b0f19;
+      --panel: #131a2a;
+      --panel-border: #1f2a44;
+      --text: #e6edf7;
+      --muted: #8b9bb4;
+      --accent: #38bdf8;
+      --green: #10b981;
+      --red: #ef4444;
+      --amber: #f59e0b;
+      --purple: #a855f7;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+      padding: 24px;
+    }
+    .container { max-width: 1240px; margin: 0 auto; }
+    header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 24px;
+      padding-bottom: 18px;
+      border-bottom: 1px solid var(--panel-border);
+    }
+    .brand h1 { font-size: 1.55rem; font-weight: 700; letter-spacing: -0.02em; }
+    .brand p { color: var(--muted); font-size: 0.9rem; }
+    .badges { display: flex; flex-wrap: wrap; gap: 8px; }
+    .badge {
+      padding: 5px 12px;
+      border-radius: 999px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      border: 1px solid var(--panel-border);
+      background: var(--panel);
+    }
+    .badge.paper { color: var(--accent); border-color: rgba(56,189,248,0.4); }
+    .badge.live { color: var(--green); border-color: rgba(16,185,129,0.5); }
+    .badge.tier { color: var(--purple); border-color: rgba(168,85,247,0.45); }
+
+    .grid-kpi {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 16px;
+      margin-bottom: 22px;
+    }
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--panel-border);
+      border-radius: 14px;
+      padding: 18px 20px;
+    }
+    .card-label { font-size: 0.8rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.04em; }
+    .card-value { font-size: 1.75rem; font-weight: 700; margin: 6px 0 4px; }
+    .card-sub { font-size: 0.84rem; color: var(--muted); }
+    .pos { color: var(--green); }
+    .neg { color: var(--red); }
+
+    .progress-wrap {
+      margin-top: 10px;
+      background: #0b101d;
+      border-radius: 999px;
+      height: 8px;
+      overflow: hidden;
+      border: 1px solid var(--panel-border);
+    }
+    .progress-bar {
+      height: 100%;
+      background: linear-gradient(90deg, var(--purple), var(--accent));
+      width: 0%;
+      transition: width 0.5s ease;
+    }
+
+    .grid-main {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 16px;
+      margin-bottom: 22px;
+    }
+    @media (max-width: 920px) { .grid-main { grid-template-columns: 1fr; } }
+
+    h2 { font-size: 1.05rem; margin-bottom: 14px; font-weight: 600; color: #f1f5f9; }
+    table { width: 100%; border-collapse: collapse; font-size: 0.86rem; }
+    th, td {
+      text-align: left;
+      padding: 10px 8px;
+      border-bottom: 1px solid rgba(31,42,68,0.7);
+    }
+    th { color: var(--muted); font-weight: 600; font-size: 0.76rem; text-transform: uppercase; }
+    .pill {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 6px;
+      font-size: 0.74rem;
+      font-weight: 600;
+    }
+    .pill.bull { background: rgba(16,185,129,0.15); color: var(--green); }
+    .pill.range { background: rgba(245,158,11,0.15); color: var(--amber); }
+    .pill.bear { background: rgba(239,68,68,0.15); color: var(--red); }
+    .notes-list { list-style: none; display: flex; flex-direction: column; gap: 8px; font-size: 0.84rem; }
+    .notes-list li {
+      padding: 8px 10px;
+      background: rgba(11,15,25,0.65);
+      border-left: 3px solid var(--purple);
+      border-radius: 6px;
+      color: #cbd5e1;
+    }
+    .section-gap { margin-bottom: 22px; }
+    .empty { color: var(--muted); font-size: 0.88rem; padding: 12px 0; }
+    footer {
+      margin-top: 28px;
+      padding-top: 16px;
+      border-top: 1px solid var(--panel-border);
+      font-size: 0.78rem;
+      color: var(--muted);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <h1 id="botTitle">AetherQuant-40</h1>
+        <p>Bot d'Investimento Autonomo Multi-Regime • Capitale Base 40€ • Auto-Miglioramento con 10% Utili</p>
+      </div>
+      <div class="badges">
+        <span class="badge paper" id="modeBadge">PAPER MODE</span>
+        <span class="badge" id="exchangeBadge">Exchange: kraken</span>
+        <span class="badge tier" id="tierBadge">Tier 1: Seed Explorer</span>
+        <span class="badge" id="cycleBadge">Ciclo #0</span>
+      </div>
+    </header>
+
+    <section class="grid-kpi">
+      <div class="card">
+        <div class="card-label">Capitale Netto Utente (90% Utili)</div>
+        <div class="card-value" id="userEquity">40.00 €</div>
+        <div class="card-sub" id="userRoi">ROI: 0.00% • Cash: 40.00€ • Investito: 0.00€</div>
+      </div>
+
+      <div class="card">
+        <div class="card-label">Fondo Autofinanziamento Bot (10%)</div>
+        <div class="card-value" style="color: var(--purple);" id="botVault">0.0000 €</div>
+        <div class="card-sub" id="vaultNextTier">Prossimo upgrade evolutivo a 1.50€</div>
+        <div class="progress-wrap"><div class="progress-bar" id="vaultProgress"></div></div>
+      </div>
+
+      <div class="card">
+        <div class="card-label">Scelta Strategica Autonoma</div>
+        <div class="card-value" style="font-size: 1.15rem; margin-top: 10px;" id="activeStrategy">-</div>
+        <div class="card-sub" id="regimeSummary">Regime prevalente: -</div>
+      </div>
+
+      <div class="card">
+        <div class="card-label">Qualità Statistica & Protezione</div>
+        <div class="card-value" id="winRate">0.0%</div>
+        <div class="card-sub" id="riskMetrics">Profit Factor: 0.00 • Drawdown: 0.00% • Trade: 0</div>
+      </div>
+    </section>
+
+    <section class="grid-main">
+      <div class="card">
+        <h2>Curva del Capitale (Utente + Fondo Evolutivo Bot 10%)</h2>
+        <div style="height: 270px;"><canvas id="equityChart"></canvas></div>
+      </div>
+      <div class="card">
+        <h2>Motore Auto-Miglioramento (Walk-Forward)</h2>
+        <p class="card-sub" style="margin-bottom: 12px;" id="genInfo">Generazione #0</p>
+        <ul class="notes-list" id="optNotes"></ul>
+      </div>
+    </section>
+
+    <section class="card section-gap">
+      <h2>Scanner Regimi di Mercato & Selezione Strategia in Tempo Reale</h2>
+      <div style="overflow-x: auto;">
+        <table>
+          <thead>
+            <tr>
+              <th>Asset</th>
+              <th>Prezzo (EUR)</th>
+              <th>Regime Rilevato</th>
+              <th>ADX / RSI</th>
+              <th>Strategia Scelta</th>
+              <th>Stato & Motivazione</th>
+            </tr>
+          </thead>
+          <tbody id="marketTableBody"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="card section-gap">
+      <h2>Posizioni Spot Attive</h2>
+      <div style="overflow-x: auto;">
+        <table>
+          <thead>
+            <tr>
+              <th>Asset</th>
+              <th>Strategia</th>
+              <th>Prezzo Ingresso</th>
+              <th>Prezzo Attuale</th>
+              <th>Valore</th>
+              <th>Stop-Loss / TP</th>
+              <th>PnL Latente</th>
+            </tr>
+          </thead>
+          <tbody id="positionsBody"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="card section-gap">
+      <h2>Storico Operazioni Chiuse & Ripartizione 90% / 10%</h2>
+      <div style="overflow-x: auto;">
+        <table>
+          <thead>
+            <tr>
+              <th>Data Chiusura</th>
+              <th>Asset</th>
+              <th>Strategia</th>
+              <th>Motivo Uscita</th>
+              <th>PnL Netto</th>
+              <th>Quota Utente (90%)</th>
+              <th>Autofinanz. Bot (10%)</th>
+            </tr>
+          </thead>
+          <tbody id="tradesBody"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <footer>
+      Ultimo aggiornamento: <span id="lastUpdate">Mai eseguito</span> • Eseguito automaticamente via GitHub Actions •
+      Avviso: Il trading comporta rischi di mercato; avvia sempre prima in Paper Mode per verificare le metriche.
+    </footer>
+  </div>
+
+  <script>
+    async function loadDashboardData() {
+      try {
+        const res = await fetch('./dashboard_data.json?t=' + Date.now());
+        if (res.ok) return await res.json();
+      } catch (_) {}
+      return window.BOT_DASHBOARD_DATA || null;
+    }
+
+    function regimePill(regime) {
+      if (regime === 'BULL_TREND') return '<span class="pill bull">BULL TREND</span>';
+      if (regime === 'BEAR_DEFENSIVE') return '<span class="pill bear">BEAR SHIELD</span>';
+      return '<span class="pill range">' + (regime || 'RANGE') + '</span>';
+    }
+
+    let chartInstance = null;
+
+    function renderDashboard(data) {
+      if (!data) return;
+      const s = data.summary || {};
+      document.getElementById('botTitle').textContent = data.bot_name || 'AetherQuant-40';
+
+      const modeEl = document.getElementById('modeBadge');
+      const isLive = (data.mode || 'paper').toLowerCase() === 'live';
+      modeEl.textContent = isLive ? 'LIVE TRADING' : 'PAPER SIMULATION';
+      modeEl.className = 'badge ' + (isLive ? 'live' : 'paper');
+
+      document.getElementById('exchangeBadge').textContent = 'Exchange: ' + (data.exchange || 'kraken');
+      document.getElementById('tierBadge').textContent = `Tier ${s.current_tier || 1}: ${s.current_tier_name || 'Seed Explorer'}`;
+      document.getElementById('cycleBadge').textContent = `Ciclo #${data.cycle_count || 0}`;
+
+      document.getElementById('userEquity').textContent = `${Number(s.user_equity_eur || 40).toFixed(2)} €`;
+      const roi = Number(s.user_roi_pct || 0);
+      document.getElementById('userRoi').innerHTML =
+        `ROI: <strong class="${roi >= 0 ? 'pos' : 'neg'}">${roi >= 0 ? '+' : ''}${roi.toFixed(2)}%</strong> • Cash: ${Number(s.trading_cash_eur || 0).toFixed(2)}€ • Investito: ${Number(s.invested_eur || 0).toFixed(2)}€`;
+
+      const vault = Number(s.bot_vault_eur || 0);
+      document.getElementById('botVault').textContent = `${vault.toFixed(4)} €`;
+
+      const tiers = (data.self_improvement && data.self_improvement.tiers) || [];
+      const nextTier = tiers.find(t => Number(t.min_vault_eur) > vault);
+      if (nextTier) {
+        const pct = Math.min(100, (vault / Number(nextTier.min_vault_eur)) * 100);
+        document.getElementById('vaultNextTier').textContent =
+          `Verso Tier ${nextTier.tier} (${nextTier.name}): ${vault.toFixed(2)}€ / ${Number(nextTier.min_vault_eur).toFixed(2)}€`;
+        document.getElementById('vaultProgress').style.width = `${pct}%`;
+      } else {
+        document.getElementById('vaultNextTier').textContent = 'Massimo Livello Evolutivo sbloccato!';
+        document.getElementById('vaultProgress').style.width = '100%';
+      }
+
+      document.getElementById('activeStrategy').textContent = s.last_selected_strategy || '-';
+      document.getElementById('regimeSummary').textContent = `Regime prevalente: ${s.last_regime_summary || '-'}`;
+      document.getElementById('winRate').textContent = `${Number(s.win_rate_pct || 0).toFixed(1)}%`;
+      document.getElementById('riskMetrics').textContent =
+        `PF: ${Number(s.profit_factor || 0).toFixed(2)} • Max DD att.: ${Number(s.current_drawdown_pct || 0).toFixed(2)}% • Trade: ${s.total_trades || 0}`;
+
+      const si = data.self_improvement || {};
+      document.getElementById('genInfo').textContent =
+        `Generazione Genoma #${si.generation || 0} • Profondità ricerca: ${si.grid_combinations_used || 12} modelli/asset`;
+
+      const notesUl = document.getElementById('optNotes');
+      notesUl.innerHTML = '';
+      const notes = si.recent_notes || [];
+      if (notes.length === 0) {
+        notesUl.innerHTML = '<li>In attesa della prima calibrazione Walk-Forward.</li>';
+      } else {
+        notes.forEach(n => {
+          const li = document.createElement('li');
+          li.textContent = n;
+          notesUl.appendChild(li);
+        });
+      }
+
+      // Market overview table
+      const mBody = document.getElementById('marketTableBody');
+      const mOverview = data.market_overview || {};
+      const mKeys = Object.keys(mOverview);
+      if (mKeys.length === 0) {
+        mBody.innerHTML = '<tr><td colspan="6" class="empty">Avvia il workflow su GitHub Actions per popolare lo scanner dei mercati EUR in tempo reale.</td></tr>';
+      } else {
+        mBody.innerHTML = mKeys.map(sym => {
+          const m = mOverview[sym];
+          return `<tr>
+            <td><strong>${sym}</strong></td>
+            <td>${Number(m.price_eur).toFixed(4)} €</td>
+            <td>${regimePill(m.regime)}</td>
+            <td>ADX ${m.adx} • RSI ${m.rsi}</td>
+            <td><code>${m.selected_strategy || '-'}</code></td>
+            <td>${m.signal === 'BUY' ? '<strong class="pos">BUY</strong> — ' : ''}${m.signal_rationale || m.rationale || ''}</td>
+          </tr>`;
+        }).join('');
+      }
+
+      // Open positions
+      const pBody = document.getElementById('positionsBody');
+      const openPos = data.open_positions || [];
+      if (openPos.length === 0) {
+        pBody.innerHTML = '<tr><td colspan="7" class="empty">Nessuna posizione aperta al momento (capitale protetto in liquidità EUR).</td></tr>';
+      } else {
+        pBody.innerHTML = openPos.map(p => {
+          const u = Number(p.unrealized_pnl_eur || 0);
+          return `<tr>
+            <td><strong>${p.symbol}</strong></td>
+            <td>${p.strategy}</td>
+            <td>${p.entry_price} €</td>
+            <td>${p.current_price} €</td>
+            <td>${Number(p.market_value_eur).toFixed(2)} €</td>
+            <td>SL ${p.stop_loss} / TP ${p.take_profit}</td>
+            <td class="${u >= 0 ? 'pos' : 'neg'}"><strong>${u >= 0 ? '+' : ''}${u.toFixed(3)} € (${p.unrealized_pnl_pct}%)</strong></td>
+          </tr>`;
+        }).join('');
+      }
+
+      // Recent trades
+      const tBody = document.getElementById('tradesBody');
+      const trades = data.recent_trades || [];
+      if (trades.length === 0) {
+        tBody.innerHTML = '<tr><td colspan="7" class="empty">Nessuna operazione chiusa nello storico.</td></tr>';
+      } else {
+        tBody.innerHTML = trades.map(t => {
+          const pnl = Number(t.net_pnl_eur || 0);
+          const dateStr = (t.closed_at || '').replace('T', ' ').slice(0, 16);
+          return `<tr>
+            <td>${dateStr}</td>
+            <td><strong>${t.symbol}</strong></td>
+            <td>${t.strategy}</td>
+            <td>${t.exit_reason}</td>
+            <td class="${pnl >= 0 ? 'pos' : 'neg'}"><strong>${pnl >= 0 ? '+' : ''}${pnl.toFixed(3)} €</strong></td>
+            <td>${Number(t.user_share_eur || 0).toFixed(3)} €</td>
+            <td style="color: var(--purple);">+${Number(t.bot_share_eur || 0).toFixed(4)} €</td>
+          </tr>`;
+        }).join('');
+      }
+
+      document.getElementById('lastUpdate').textContent = data.last_run_at
+        ? new Date(data.last_run_at).toLocaleString('it-IT')
+        : 'In attesa del primo avvio su GitHub Actions';
+
+      // Chart
+      const curve = data.equity_curve || [];
+      const labels = curve.map(pt => (pt.timestamp || '').slice(5, 16).replace('T', ' '));
+      const userSeries = curve.map(pt => pt.user_equity_eur);
+      const totalSeries = curve.map(pt => pt.total_equity_eur);
+
+      const ctx = document.getElementById('equityChart').getContext('2d');
+      if (chartInstance) chartInstance.destroy();
+      chartInstance = new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels,
+          datasets: [
+            {
+              label: 'Capitale Utente (€)',
+              data: userSeries,
+              borderColor: '#38bdf8',
+              backgroundColor: 'rgba(56,189,248,0.12)',
+              fill: true,
+              tension: 0.25
+            },
+            {
+              label: 'Ecosistema Totale incl. Fondo Bot 10% (€)',
+              data: totalSeries,
+              borderColor: '#a855f7',
+              borderDash: [5, 4],
+              fill: false,
+              tension: 0.25
+            }
+          ]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: { legend: { labels: { color: '#cbd5e1' } } },
+          scales: {
+            x: { ticks: { color: '#8b9bb4', maxTicksLimit: 8 }, grid: { color: 'rgba(31,42,68,0.4)' } },
+            y: { ticks: { color: '#8b9bb4' }, grid: { color: 'rgba(31,42,68,0.4)' } }
+          }
+        }
+      });
+    }
+
+    loadDashboardData().then(renderDashboard);
+  </script>
+</body>
+</html>

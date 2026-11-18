@@ -1,0 +1,77 @@
+window.BOT_DASHBOARD_DATA = {
+  "bot_name": "AetherQuant-40",
+  "version": "1.0.0",
+  "mode": "paper",
+  "exchange": "kraken",
+  "last_run_at": null,
+  "last_optimized_at": null,
+  "cycle_count": 0,
+  "summary": {
+    "initial_capital_eur": 40.0,
+    "total_ecosystem_eur": 40.0,
+    "user_equity_eur": 40.0,
+    "trading_cash_eur": 40.0,
+    "invested_eur": 0.0,
+    "bot_vault_eur": 0.0,
+    "bot_share_pct": 10.0,
+    "high_water_mark_pnl_eur": 0.0,
+    "user_roi_pct": 0.0,
+    "total_roi_pct": 0.0,
+    "win_rate_pct": 0.0,
+    "profit_factor": 0.0,
+    "total_trades": 0,
+    "current_drawdown_pct": 0.0,
+    "current_tier": 1,
+    "current_tier_name": "Seed Explorer",
+    "last_regime_summary": "IN_ATTESA_PRIMO_CICLO",
+    "last_selected_strategy": "Auto-Calibrazione Walk-Forward pronta"
+  },
+  "self_improvement": {
+    "generation": 0,
+    "grid_combinations_used": 12,
+    "tiers": [
+      {
+        "tier": 1,
+        "name": "Seed Explorer",
+        "min_vault_eur": 0.0,
+        "grid_combinations": 12,
+        "max_symbols_scanned": 4,
+        "description": "Scansione base sui top 4 asset EUR e griglia rapida walk-forward."
+      },
+      {
+        "tier": 2,
+        "name": "Adaptive Quant",
+        "min_vault_eur": 1.5,
+        "grid_combinations": 27,
+        "max_symbols_scanned": 6,
+        "description": "Sbloccato con 1.50€ nel Fondo Bot: espande universo a 6 asset e ricerca parametrica multi-regime."
+      },
+      {
+        "tier": 3,
+        "name": "Autonomous Alpha",
+        "min_vault_eur": 5.0,
+        "grid_combinations": 48,
+        "max_symbols_scanned": 8,
+        "description": "Sbloccato con 5.00€ nel Fondo Bot: mutazione evolutiva profonda, filtro multi-timeframe e compounding dinamico."
+      }
+    ],
+    "recent_notes": [
+      "Pronto per il primo ciclo su GitHub Actions: eseguirà il download delle candele EUR reali e la calibrazione Walk-Forward."
+    ],
+    "assets_genome": {}
+  },
+  "market_overview": {},
+  "open_positions": [],
+  "recent_trades": [],
+  "equity_curve": [
+    {
+      "timestamp": "2026-11-17T20:00:00+00:00",
+      "total_equity_eur": 40.0,
+      "user_equity_eur": 40.0,
+      "bot_vault_eur": 0.0,
+      "trading_cash_eur": 40.0,
+      "invested_eur": 0.0,
+      "regime_summary": "INITIAL_SEED"
+    }
+  ]
+};
