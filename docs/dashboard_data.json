@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "mode": "paper",
   "exchange": "kraken",
-  "last_run_at": "2026-11-19T17:00:43.554370+00:00",
+  "last_run_at": "2026-11-19T17:53:50.000225+00:00",
   "last_optimized_at": "2026-11-19T11:55:25.229347+00:00",
-  "cycle_count": 23,
+  "cycle_count": 24,
   "summary": {
     "initial_capital_eur": 40.0,
     "total_ecosystem_eur": 40.0,
@@ -23,8 +23,8 @@
     "current_drawdown_pct": 0.0,
     "current_tier": 1,
     "current_tier_name": "Seed Explorer",
-    "last_regime_summary": "RANGE_ACCUMULATION",
-    "last_selected_strategy": "Attesa Setup Ottimale (Cash EUR)"
+    "last_regime_summary": "BEAR_DEFENSIVE",
+    "last_selected_strategy": "Scudo Liquidità EUR (Difesa)"
   },
   "self_improvement": {
     "generation": 4,
@@ -560,6 +560,15 @@
       "trading_cash_eur": 40.0,
       "invested_eur": 0,
       "regime_summary": "RANGE_ACCUMULATION"
+    },
+    {
+      "timestamp": "2026-11-19T17:53:50.000225+00:00",
+      "total_equity_eur": 40.0,
+      "user_equity_eur": 40.0,
+      "bot_vault_eur": 0.0,
+      "trading_cash_eur": 40.0,
+      "invested_eur": 0,
+      "regime_summary": "BEAR_DEFENSIVE"
     }
   ]
 }
