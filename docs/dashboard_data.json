@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "mode": "paper",
   "exchange": "kraken",
-  "last_run_at": "2026-11-19T18:56:50.607876+00:00",
+  "last_run_at": "2026-11-19T19:59:31.635927+00:00",
   "last_optimized_at": "2026-11-19T18:56:50.607876+00:00",
-  "cycle_count": 25,
+  "cycle_count": 26,
   "summary": {
     "initial_capital_eur": 40.0,
     "total_ecosystem_eur": 40.0,
@@ -23,8 +23,8 @@
     "current_drawdown_pct": 0.0,
     "current_tier": 1,
     "current_tier_name": "Seed Explorer",
-    "last_regime_summary": "BEAR_DEFENSIVE",
-    "last_selected_strategy": "Scudo Liquidità EUR (Difesa)"
+    "last_regime_summary": "RANGE_ACCUMULATION",
+    "last_selected_strategy": "Attesa Setup Ottimale (Cash EUR)"
   },
   "self_improvement": {
     "generation": 5,
@@ -290,53 +290,53 @@
   },
   "market_overview": {
     "BTC/EUR": {
-      "price_eur": 57104.3,
+      "price_eur": 57228.3,
       "regime": "BEAR_DEFENSIVE",
-      "adx": 18.0,
-      "rsi": 38.59,
-      "atr_pct": 0.91,
-      "slope_pct": -0.387,
+      "adx": 19.03,
+      "rsi": 41.18,
+      "atr_pct": 0.92,
+      "slope_pct": -0.4,
       "confidence": 0.66,
-      "rationale": "Mercato ribassista (Prezzo < EMA150, slope=-0.39%): attiva difesa capitale.",
+      "rationale": "Mercato ribassista (Prezzo < EMA150, slope=-0.40%): attiva difesa capitale.",
       "selected_strategy": "capital_shield_eur",
       "signal": "HOLD",
       "signal_rationale": "Modalità Scudo EUR attiva: mercato ribassista, capitale protetto."
     },
     "ETH/EUR": {
-      "price_eur": 1611.63,
+      "price_eur": 1618.01,
       "regime": "BEAR_DEFENSIVE",
-      "adx": 17.68,
-      "rsi": 40.28,
-      "atr_pct": 1.08,
-      "slope_pct": -0.339,
+      "adx": 18.46,
+      "rsi": 44.1,
+      "atr_pct": 1.09,
+      "slope_pct": -0.353,
       "confidence": 0.65,
-      "rationale": "Mercato ribassista (Prezzo < EMA150, slope=-0.34%): attiva difesa capitale.",
+      "rationale": "Mercato ribassista (Prezzo < EMA150, slope=-0.35%): attiva difesa capitale.",
       "selected_strategy": "capital_shield_eur",
       "signal": "HOLD",
       "signal_rationale": "Modalità Scudo EUR attiva: mercato ribassista, capitale protetto."
     },
     "SOL/EUR": {
-      "price_eur": 67.2,
+      "price_eur": 67.41,
       "regime": "RANGE_ACCUMULATION",
-      "adx": 16.45,
-      "rsi": 47.22,
+      "adx": 16.05,
+      "rsi": 49.46,
       "atr_pct": 1.15,
-      "slope_pct": -0.091,
+      "slope_pct": -0.097,
       "confidence": 0.65,
-      "rationale": "Mercato laterale/accumulazione (ADX=16.4, RSI=47.2): ideale per Mean-Reversion selettiva.",
+      "rationale": "Mercato laterale/accumulazione (ADX=16.0, RSI=49.5): ideale per Mean-Reversion selettiva.",
       "selected_strategy": "mean_reversion_bb",
       "signal": "HOLD",
       "signal_rationale": "In attesa di setup ad aspettativa positiva (mean_reversion_bb)."
     },
     "XRP/EUR": {
-      "price_eur": 0.8823,
+      "price_eur": 0.8866,
       "regime": "RANGE_ACCUMULATION",
-      "adx": 14.87,
-      "rsi": 43.62,
-      "atr_pct": 1.17,
-      "slope_pct": -0.063,
+      "adx": 14.85,
+      "rsi": 47.61,
+      "atr_pct": 1.18,
+      "slope_pct": -0.076,
       "confidence": 0.65,
-      "rationale": "Mercato laterale/accumulazione (ADX=14.9, RSI=43.6): ideale per Mean-Reversion selettiva.",
+      "rationale": "Mercato laterale/accumulazione (ADX=14.9, RSI=47.6): ideale per Mean-Reversion selettiva.",
       "selected_strategy": "mean_reversion_bb",
       "signal": "HOLD",
       "signal_rationale": "In attesa di setup ad aspettativa positiva (mean_reversion_bb)."
@@ -578,6 +578,15 @@
       "trading_cash_eur": 40.0,
       "invested_eur": 0,
       "regime_summary": "BEAR_DEFENSIVE"
+    },
+    {
+      "timestamp": "2026-11-19T19:59:31.635927+00:00",
+      "total_equity_eur": 40.0,
+      "user_equity_eur": 40.0,
+      "bot_vault_eur": 0.0,
+      "trading_cash_eur": 40.0,
+      "invested_eur": 0,
+      "regime_summary": "RANGE_ACCUMULATION"
     }
   ]
 }
