@@ -8,13 +8,13 @@
   "high_water_mark_pnl_eur": 0.0,
   "cumulative_user_profit_eur": 0.0,
   "peak_user_equity_eur": 40.0,
-  "cycle_count": 18,
+  "cycle_count": 19,
   "current_tier": 1,
   "current_tier_name": "Seed Explorer",
   "last_regime_summary": "RANGE_ACCUMULATION",
   "last_selected_strategy": "Attesa Setup Ottimale (Cash EUR)",
-  "last_run_at": "2026-11-19T10:57:54.279923+00:00",
-  "last_optimized_at": "2026-11-19T05:00:39.399781+00:00",
+  "last_run_at": "2026-11-19T11:55:25.229347+00:00",
+  "last_optimized_at": "2026-11-19T11:55:25.229347+00:00",
   "positions": {},
   "trade_history": [],
   "equity_curve": [
@@ -182,6 +182,15 @@
     },
     {
       "timestamp": "2026-11-19T10:57:54.279923+00:00",
+      "total_equity_eur": 40.0,
+      "user_equity_eur": 40.0,
+      "bot_vault_eur": 0.0,
+      "trading_cash_eur": 40.0,
+      "invested_eur": 0,
+      "regime_summary": "RANGE_ACCUMULATION"
+    },
+    {
+      "timestamp": "2026-11-19T11:55:25.229347+00:00",
       "total_equity_eur": 40.0,
       "user_equity_eur": 40.0,
       "bot_vault_eur": 0.0,
