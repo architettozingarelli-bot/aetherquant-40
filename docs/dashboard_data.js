@@ -3,9 +3,9 @@ window.BOT_DASHBOARD_DATA = {
   "version": "1.0.0",
   "mode": "paper",
   "exchange": "kraken",
-  "last_run_at": "2026-11-20T20:47:49.052775+00:00",
-  "last_optimized_at": "2026-11-20T15:54:52.321728+00:00",
-  "cycle_count": 48,
+  "last_run_at": "2026-11-20T21:45:27.550059+00:00",
+  "last_optimized_at": "2026-11-20T21:45:27.550059+00:00",
+  "cycle_count": 49,
   "summary": {
     "initial_capital_eur": 40.0,
     "total_ecosystem_eur": 40.0,
@@ -27,7 +27,7 @@ window.BOT_DASHBOARD_DATA = {
     "last_selected_strategy": "Scudo Liquidità EUR (Difesa)"
   },
   "self_improvement": {
-    "generation": 8,
+    "generation": 9,
     "grid_combinations_used": 12,
     "tiers": [
       {
@@ -110,10 +110,10 @@ window.BOT_DASHBOARD_DATA = {
             },
             "walk_forward_score": -1.0,
             "metrics": {
-              "in_sample_return_pct": -2.229,
-              "out_of_sample_return_pct": -5.961,
-              "profit_factor": 0.07,
-              "sample_trades": 12
+              "in_sample_return_pct": -3.149,
+              "out_of_sample_return_pct": -8.033,
+              "profit_factor": 0.05,
+              "sample_trades": 15
             }
           }
         }
@@ -166,10 +166,10 @@ window.BOT_DASHBOARD_DATA = {
             },
             "walk_forward_score": -1.0,
             "metrics": {
-              "in_sample_return_pct": -4.076,
+              "in_sample_return_pct": -5.139,
               "out_of_sample_return_pct": -5.285,
-              "profit_factor": 0.07,
-              "sample_trades": 12
+              "profit_factor": 0.06,
+              "sample_trades": 13
             }
           }
         }
@@ -178,12 +178,12 @@ window.BOT_DASHBOARD_DATA = {
         "strategies": {
           "trend_pullback": {
             "params": {
-              "fast_ema": 28,
+              "fast_ema": 15,
               "slow_ema": 110,
               "rsi_low": 38.0,
               "rsi_high": 58.0,
               "stop_atr_mult": 1.6,
-              "tp_atr_mult": 3.2,
+              "tp_atr_mult": 3.8,
               "trail_atr_mult": 2.0
             },
             "walk_forward_score": -0.7298,
@@ -223,9 +223,9 @@ window.BOT_DASHBOARD_DATA = {
             "walk_forward_score": -1.0,
             "metrics": {
               "in_sample_return_pct": -2.451,
-              "out_of_sample_return_pct": -4.0,
+              "out_of_sample_return_pct": -5.392,
               "profit_factor": 0.19,
-              "sample_trades": 11
+              "sample_trades": 12
             }
           }
         }
@@ -234,17 +234,17 @@ window.BOT_DASHBOARD_DATA = {
         "strategies": {
           "trend_pullback": {
             "params": {
-              "fast_ema": 28,
+              "fast_ema": 15,
               "slow_ema": 75,
               "rsi_low": 38.0,
               "rsi_high": 58.0,
               "stop_atr_mult": 1.6,
-              "tp_atr_mult": 3.8,
+              "tp_atr_mult": 4.5,
               "trail_atr_mult": 2.0
             },
             "walk_forward_score": -1.0,
             "metrics": {
-              "in_sample_return_pct": -0.804,
+              "in_sample_return_pct": -0.769,
               "out_of_sample_return_pct": -2.636,
               "profit_factor": 0.04,
               "sample_trades": 5
@@ -279,9 +279,9 @@ window.BOT_DASHBOARD_DATA = {
             "walk_forward_score": -1.0,
             "metrics": {
               "in_sample_return_pct": -2.987,
-              "out_of_sample_return_pct": -1.773,
-              "profit_factor": 0.16,
-              "sample_trades": 10
+              "out_of_sample_return_pct": -3.172,
+              "profit_factor": 0.1,
+              "sample_trades": 11
             }
           }
         }
@@ -290,53 +290,53 @@ window.BOT_DASHBOARD_DATA = {
   },
   "market_overview": {
     "BTC/EUR": {
-      "price_eur": 53366.4,
+      "price_eur": 53272.2,
       "regime": "BEAR_DEFENSIVE",
-      "adx": 49.0,
-      "rsi": 24.48,
-      "atr_pct": 1.4,
-      "slope_pct": -0.79,
-      "confidence": 0.72,
-      "rationale": "Mercato ribassista (Prezzo < EMA150, slope=-0.79%): attiva difesa capitale.",
+      "adx": 50.77,
+      "rsi": 23.99,
+      "atr_pct": 1.37,
+      "slope_pct": -0.85,
+      "confidence": 0.73,
+      "rationale": "Mercato ribassista (Prezzo < EMA150, slope=-0.85%): attiva difesa capitale.",
       "selected_strategy": "capital_shield_eur",
       "signal": "HOLD",
       "signal_rationale": "Modalità Scudo EUR attiva: mercato ribassista, capitale protetto."
     },
     "ETH/EUR": {
-      "price_eur": 1465.38,
+      "price_eur": 1459.84,
       "regime": "BEAR_DEFENSIVE",
-      "adx": 44.87,
-      "rsi": 20.22,
-      "atr_pct": 1.73,
-      "slope_pct": -0.885,
-      "confidence": 0.73,
-      "rationale": "Mercato ribassista (Prezzo < EMA150, slope=-0.89%): attiva difesa capitale.",
+      "adx": 47.12,
+      "rsi": 19.57,
+      "atr_pct": 1.74,
+      "slope_pct": -0.982,
+      "confidence": 0.75,
+      "rationale": "Mercato ribassista (Prezzo < EMA150, slope=-0.98%): attiva difesa capitale.",
       "selected_strategy": "capital_shield_eur",
       "signal": "HOLD",
       "signal_rationale": "Modalità Scudo EUR attiva: mercato ribassista, capitale protetto."
     },
     "SOL/EUR": {
-      "price_eur": 62.15,
+      "price_eur": 61.53,
       "regime": "BEAR_DEFENSIVE",
-      "adx": 46.29,
-      "rsi": 28.66,
-      "atr_pct": 1.61,
-      "slope_pct": -0.683,
-      "confidence": 0.7,
-      "rationale": "Mercato ribassista (Prezzo < EMA150, slope=-0.68%): attiva difesa capitale.",
+      "adx": 47.88,
+      "rsi": 26.27,
+      "atr_pct": 1.65,
+      "slope_pct": -0.749,
+      "confidence": 0.71,
+      "rationale": "Mercato ribassista (Prezzo < EMA150, slope=-0.75%): attiva difesa capitale.",
       "selected_strategy": "capital_shield_eur",
       "signal": "HOLD",
       "signal_rationale": "Modalità Scudo EUR attiva: mercato ribassista, capitale protetto."
     },
     "XRP/EUR": {
-      "price_eur": 0.8153,
+      "price_eur": 0.8076,
       "regime": "BEAR_DEFENSIVE",
-      "adx": 27.4,
-      "rsi": 21.3,
-      "atr_pct": 1.53,
-      "slope_pct": -0.654,
-      "confidence": 0.7,
-      "rationale": "Mercato ribassista (Prezzo < EMA150, slope=-0.65%): attiva difesa capitale.",
+      "adx": 29.2,
+      "rsi": 19.37,
+      "atr_pct": 1.55,
+      "slope_pct": -0.736,
+      "confidence": 0.71,
+      "rationale": "Mercato ribassista (Prezzo < EMA150, slope=-0.74%): attiva difesa capitale.",
       "selected_strategy": "capital_shield_eur",
       "signal": "HOLD",
       "signal_rationale": "Modalità Scudo EUR attiva: mercato ribassista, capitale protetto."
@@ -779,6 +779,15 @@ window.BOT_DASHBOARD_DATA = {
     },
     {
       "timestamp": "2026-11-20T20:47:49.052775+00:00",
+      "total_equity_eur": 40.0,
+      "user_equity_eur": 40.0,
+      "bot_vault_eur": 0.0,
+      "trading_cash_eur": 40.0,
+      "invested_eur": 0,
+      "regime_summary": "BEAR_DEFENSIVE"
+    },
+    {
+      "timestamp": "2026-11-20T21:45:27.550059+00:00",
       "total_equity_eur": 40.0,
       "user_equity_eur": 40.0,
       "bot_vault_eur": 0.0,
