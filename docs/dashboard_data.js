@@ -3,9 +3,9 @@ window.BOT_DASHBOARD_DATA = {
   "version": "1.0.0",
   "mode": "paper",
   "exchange": "kraken",
-  "last_run_at": "2026-11-20T14:20:02.312291+00:00",
-  "last_optimized_at": "2026-11-20T08:59:16.240336+00:00",
-  "cycle_count": 42,
+  "last_run_at": "2026-11-20T15:54:52.321728+00:00",
+  "last_optimized_at": "2026-11-20T15:54:52.321728+00:00",
+  "cycle_count": 43,
   "summary": {
     "initial_capital_eur": 40.0,
     "total_ecosystem_eur": 40.0,
@@ -27,7 +27,7 @@ window.BOT_DASHBOARD_DATA = {
     "last_selected_strategy": "Scudo Liquidità EUR (Difesa)"
   },
   "self_improvement": {
-    "generation": 7,
+    "generation": 8,
     "grid_combinations_used": 12,
     "tiers": [
       {
@@ -56,10 +56,10 @@ window.BOT_DASHBOARD_DATA = {
       }
     ],
     "recent_notes": [
-      "BTC/EUR: miglior strategia evoluta = donchian_breakout (WF score +0.12)",
-      "ETH/EUR: miglior strategia evoluta = trend_pullback (WF score +0.17)",
-      "SOL/EUR: miglior strategia evoluta = donchian_breakout (WF score -0.53)",
-      "XRP/EUR: miglior strategia evoluta = donchian_breakout (WF score -0.79)"
+      "BTC/EUR: miglior strategia evoluta = trend_pullback (WF score -0.30)",
+      "ETH/EUR: miglior strategia evoluta = trend_pullback (WF score +0.05)",
+      "SOL/EUR: miglior strategia evoluta = donchian_breakout (WF score -0.67)",
+      "XRP/EUR: miglior strategia evoluta = donchian_breakout (WF score -0.56)"
     ],
     "assets_genome": {
       "BTC/EUR": {
@@ -74,12 +74,12 @@ window.BOT_DASHBOARD_DATA = {
               "tp_atr_mult": 3.8,
               "trail_atr_mult": 2.0
             },
-            "walk_forward_score": -0.2867,
+            "walk_forward_score": -0.3047,
             "metrics": {
-              "in_sample_return_pct": -0.543,
+              "in_sample_return_pct": -0.602,
               "out_of_sample_return_pct": 0.0,
-              "profit_factor": 0.64,
-              "sample_trades": 2
+              "profit_factor": 0.6,
+              "sample_trades": 1
             }
           },
           "donchian_breakout": {
@@ -91,12 +91,12 @@ window.BOT_DASHBOARD_DATA = {
               "tp_atr_mult": 3.6,
               "trail_atr_mult": 2.2
             },
-            "walk_forward_score": 0.12,
+            "walk_forward_score": -0.3391,
             "metrics": {
-              "in_sample_return_pct": 0.431,
+              "in_sample_return_pct": -0.703,
               "out_of_sample_return_pct": 0.0,
-              "profit_factor": 1.25,
-              "sample_trades": 2
+              "profit_factor": 0.6,
+              "sample_trades": 1
             }
           },
           "mean_reversion_bb": {
@@ -110,10 +110,10 @@ window.BOT_DASHBOARD_DATA = {
             },
             "walk_forward_score": -1.0,
             "metrics": {
-              "in_sample_return_pct": -1.27,
-              "out_of_sample_return_pct": -6.066,
-              "profit_factor": 0.1,
-              "sample_trades": 11
+              "in_sample_return_pct": -2.229,
+              "out_of_sample_return_pct": -5.961,
+              "profit_factor": 0.07,
+              "sample_trades": 12
             }
           }
         }
@@ -130,12 +130,12 @@ window.BOT_DASHBOARD_DATA = {
               "tp_atr_mult": 3.6,
               "trail_atr_mult": 2.0
             },
-            "walk_forward_score": 0.1714,
+            "walk_forward_score": 0.05,
             "metrics": {
-              "in_sample_return_pct": 0.51,
+              "in_sample_return_pct": 0.0,
               "out_of_sample_return_pct": 0.0,
-              "profit_factor": 1.4,
-              "sample_trades": 1
+              "profit_factor": 1.0,
+              "sample_trades": 0
             }
           },
           "donchian_breakout": {
@@ -147,12 +147,12 @@ window.BOT_DASHBOARD_DATA = {
               "tp_atr_mult": 4.2,
               "trail_atr_mult": 2.2
             },
-            "walk_forward_score": 0.1511,
+            "walk_forward_score": 0.05,
             "metrics": {
-              "in_sample_return_pct": 0.365,
+              "in_sample_return_pct": 0.0,
               "out_of_sample_return_pct": 0.0,
-              "profit_factor": 1.4,
-              "sample_trades": 1
+              "profit_factor": 1.0,
+              "sample_trades": 0
             }
           },
           "mean_reversion_bb": {
@@ -167,9 +167,9 @@ window.BOT_DASHBOARD_DATA = {
             "walk_forward_score": -1.0,
             "metrics": {
               "in_sample_return_pct": -4.076,
-              "out_of_sample_return_pct": -5.178,
-              "profit_factor": 0.08,
-              "sample_trades": 13
+              "out_of_sample_return_pct": -5.285,
+              "profit_factor": 0.07,
+              "sample_trades": 12
             }
           }
         }
@@ -178,20 +178,20 @@ window.BOT_DASHBOARD_DATA = {
         "strategies": {
           "trend_pullback": {
             "params": {
-              "fast_ema": 21,
-              "slow_ema": 75,
+              "fast_ema": 28,
+              "slow_ema": 110,
               "rsi_low": 38.0,
               "rsi_high": 58.0,
-              "stop_atr_mult": 2.2,
-              "tp_atr_mult": 4.5,
+              "stop_atr_mult": 1.6,
+              "tp_atr_mult": 3.2,
               "trail_atr_mult": 2.0
             },
-            "walk_forward_score": -0.5441,
+            "walk_forward_score": -0.7298,
             "metrics": {
-              "in_sample_return_pct": -1.306,
-              "out_of_sample_return_pct": 0.0,
-              "profit_factor": 0.6,
-              "sample_trades": 1
+              "in_sample_return_pct": -0.876,
+              "out_of_sample_return_pct": -0.866,
+              "profit_factor": 0.0,
+              "sample_trades": 2
             }
           },
           "donchian_breakout": {
@@ -203,12 +203,12 @@ window.BOT_DASHBOARD_DATA = {
               "tp_atr_mult": 3.6,
               "trail_atr_mult": 2.2
             },
-            "walk_forward_score": -0.5306,
+            "walk_forward_score": -0.6685,
             "metrics": {
-              "in_sample_return_pct": 0.271,
+              "in_sample_return_pct": 0.0,
               "out_of_sample_return_pct": -1.265,
-              "profit_factor": 0.8,
-              "sample_trades": 2
+              "profit_factor": 0.4,
+              "sample_trades": 1
             }
           },
           "mean_reversion_bb": {
@@ -223,9 +223,9 @@ window.BOT_DASHBOARD_DATA = {
             "walk_forward_score": -1.0,
             "metrics": {
               "in_sample_return_pct": -2.451,
-              "out_of_sample_return_pct": -3.796,
-              "profit_factor": 0.22,
-              "sample_trades": 12
+              "out_of_sample_return_pct": -4.0,
+              "profit_factor": 0.19,
+              "sample_trades": 11
             }
           }
         }
@@ -244,10 +244,10 @@ window.BOT_DASHBOARD_DATA = {
             },
             "walk_forward_score": -1.0,
             "metrics": {
-              "in_sample_return_pct": -0.429,
+              "in_sample_return_pct": -0.804,
               "out_of_sample_return_pct": -2.636,
-              "profit_factor": 0.23,
-              "sample_trades": 6
+              "profit_factor": 0.04,
+              "sample_trades": 5
             }
           },
           "donchian_breakout": {
@@ -259,12 +259,12 @@ window.BOT_DASHBOARD_DATA = {
               "tp_atr_mult": 3.6,
               "trail_atr_mult": 2.2
             },
-            "walk_forward_score": -0.7943,
+            "walk_forward_score": -0.5628,
             "metrics": {
-              "in_sample_return_pct": -0.939,
+              "in_sample_return_pct": 0.0,
               "out_of_sample_return_pct": -1.007,
-              "profit_factor": 0.0,
-              "sample_trades": 2
+              "profit_factor": 0.4,
+              "sample_trades": 1
             }
           },
           "mean_reversion_bb": {
@@ -290,12 +290,12 @@ window.BOT_DASHBOARD_DATA = {
   },
   "market_overview": {
     "BTC/EUR": {
-      "price_eur": 56226.3,
+      "price_eur": 56195.4,
       "regime": "BEAR_DEFENSIVE",
-      "adx": 40.56,
-      "rsi": 43.34,
-      "atr_pct": 0.97,
-      "slope_pct": -0.539,
+      "adx": 40.1,
+      "rsi": 42.95,
+      "atr_pct": 0.99,
+      "slope_pct": -0.536,
       "confidence": 0.68,
       "rationale": "Mercato ribassista (Prezzo < EMA150, slope=-0.54%): attiva difesa capitale.",
       "selected_strategy": "capital_shield_eur",
@@ -303,40 +303,40 @@ window.BOT_DASHBOARD_DATA = {
       "signal_rationale": "Modalità Scudo EUR attiva: mercato ribassista, capitale protetto."
     },
     "ETH/EUR": {
-      "price_eur": 1593.85,
+      "price_eur": 1584.59,
       "regime": "BEAR_DEFENSIVE",
-      "adx": 32.62,
-      "rsi": 46.68,
-      "atr_pct": 1.11,
-      "slope_pct": -0.496,
+      "adx": 33.0,
+      "rsi": 43.12,
+      "atr_pct": 1.17,
+      "slope_pct": -0.49,
       "confidence": 0.67,
-      "rationale": "Mercato ribassista (Prezzo < EMA150, slope=-0.50%): attiva difesa capitale.",
+      "rationale": "Mercato ribassista (Prezzo < EMA150, slope=-0.49%): attiva difesa capitale.",
       "selected_strategy": "capital_shield_eur",
       "signal": "HOLD",
       "signal_rationale": "Modalità Scudo EUR attiva: mercato ribassista, capitale protetto."
     },
     "SOL/EUR": {
-      "price_eur": 64.81,
+      "price_eur": 64.62,
       "regime": "BEAR_DEFENSIVE",
-      "adx": 35.98,
-      "rsi": 35.5,
-      "atr_pct": 1.17,
-      "slope_pct": -0.361,
-      "confidence": 0.65,
-      "rationale": "Mercato ribassista (Prezzo < EMA150, slope=-0.36%): attiva difesa capitale.",
+      "adx": 37.02,
+      "rsi": 34.19,
+      "atr_pct": 1.21,
+      "slope_pct": -0.388,
+      "confidence": 0.66,
+      "rationale": "Mercato ribassista (Prezzo < EMA150, slope=-0.39%): attiva difesa capitale.",
       "selected_strategy": "capital_shield_eur",
       "signal": "HOLD",
       "signal_rationale": "Modalità Scudo EUR attiva: mercato ribassista, capitale protetto."
     },
     "XRP/EUR": {
-      "price_eur": 0.8611,
+      "price_eur": 0.8583,
       "regime": "BEAR_DEFENSIVE",
-      "adx": 16.63,
-      "rsi": 37.97,
-      "atr_pct": 1.16,
-      "slope_pct": -0.264,
+      "adx": 17.4,
+      "rsi": 36.4,
+      "atr_pct": 1.2,
+      "slope_pct": -0.296,
       "confidence": 0.64,
-      "rationale": "Mercato ribassista (Prezzo < EMA150, slope=-0.26%): attiva difesa capitale.",
+      "rationale": "Mercato ribassista (Prezzo < EMA150, slope=-0.30%): attiva difesa capitale.",
       "selected_strategy": "capital_shield_eur",
       "signal": "HOLD",
       "signal_rationale": "Modalità Scudo EUR attiva: mercato ribassista, capitale protetto."
@@ -725,6 +725,15 @@ window.BOT_DASHBOARD_DATA = {
     },
     {
       "timestamp": "2026-11-20T14:20:02.312291+00:00",
+      "total_equity_eur": 40.0,
+      "user_equity_eur": 40.0,
+      "bot_vault_eur": 0.0,
+      "trading_cash_eur": 40.0,
+      "invested_eur": 0,
+      "regime_summary": "BEAR_DEFENSIVE"
+    },
+    {
+      "timestamp": "2026-11-20T15:54:52.321728+00:00",
       "total_equity_eur": 40.0,
       "user_equity_eur": 40.0,
       "bot_vault_eur": 0.0,
