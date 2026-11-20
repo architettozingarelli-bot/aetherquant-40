@@ -8,13 +8,13 @@
   "high_water_mark_pnl_eur": 0.0,
   "cumulative_user_profit_eur": 0.0,
   "peak_user_equity_eur": 40.0,
-  "cycle_count": 36,
+  "cycle_count": 37,
   "current_tier": 1,
   "current_tier_name": "Seed Explorer",
   "last_regime_summary": "BEAR_DEFENSIVE",
   "last_selected_strategy": "Scudo Liquidità EUR (Difesa)",
-  "last_run_at": "2026-11-20T07:10:57.847559+00:00",
-  "last_optimized_at": "2026-11-20T00:57:34.547721+00:00",
+  "last_run_at": "2026-11-20T08:59:16.240336+00:00",
+  "last_optimized_at": "2026-11-20T08:59:16.240336+00:00",
   "positions": {},
   "trade_history": [],
   "equity_curve": [
@@ -344,6 +344,15 @@
     },
     {
       "timestamp": "2026-11-20T07:10:57.847559+00:00",
+      "total_equity_eur": 40.0,
+      "user_equity_eur": 40.0,
+      "bot_vault_eur": 0.0,
+      "trading_cash_eur": 40.0,
+      "invested_eur": 0,
+      "regime_summary": "BEAR_DEFENSIVE"
+    },
+    {
+      "timestamp": "2026-11-20T08:59:16.240336+00:00",
       "total_equity_eur": 40.0,
       "user_equity_eur": 40.0,
       "bot_vault_eur": 0.0,
