@@ -1,6 +1,6 @@
 {
-  "generation": 11,
-  "updated_at": "2026-11-21T11:43:13.929285+00:00",
+  "generation": 12,
+  "updated_at": "2026-11-21T17:40:26.802590+00:00",
   "grid_combinations_used": 12,
   "assets": {
     "BTC/EUR": {
@@ -42,19 +42,19 @@
         },
         "mean_reversion_bb": {
           "params": {
-            "bb_period": 18,
+            "bb_period": 20,
             "bb_std": 2.25,
             "rsi_oversold": 35.0,
             "stop_atr_mult": 1.8,
-            "tp_atr_mult": 2.6,
+            "tp_atr_mult": 3.8,
             "trail_atr_mult": 1.6
           },
           "walk_forward_score": -1.0,
           "metrics": {
-            "in_sample_return_pct": -5.136,
+            "in_sample_return_pct": -4.181,
             "out_of_sample_return_pct": -7.59,
-            "profit_factor": 0.03,
-            "sample_trades": 16
+            "profit_factor": 0.04,
+            "sample_trades": 15
           }
         }
       }
@@ -107,10 +107,10 @@
           },
           "walk_forward_score": -1.0,
           "metrics": {
-            "in_sample_return_pct": -7.677,
+            "in_sample_return_pct": -6.577,
             "out_of_sample_return_pct": -5.766,
-            "profit_factor": 0.04,
-            "sample_trades": 15
+            "profit_factor": 0.05,
+            "sample_trades": 14
           }
         }
       }
@@ -163,10 +163,10 @@
           },
           "walk_forward_score": -1.0,
           "metrics": {
-            "in_sample_return_pct": -6.49,
+            "in_sample_return_pct": -5.259,
             "out_of_sample_return_pct": -5.661,
-            "profit_factor": 0.1,
-            "sample_trades": 15
+            "profit_factor": 0.12,
+            "sample_trades": 14
           }
         }
       }
@@ -219,10 +219,10 @@
           },
           "walk_forward_score": -1.0,
           "metrics": {
-            "in_sample_return_pct": -4.707,
+            "in_sample_return_pct": -3.688,
             "out_of_sample_return_pct": -3.569,
-            "profit_factor": 0.13,
-            "sample_trades": 14
+            "profit_factor": 0.14,
+            "sample_trades": 13
           }
         }
       }
