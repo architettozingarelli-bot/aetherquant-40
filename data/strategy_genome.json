@@ -1,6 +1,6 @@
 {
-  "generation": 9,
-  "updated_at": "2026-11-20T21:45:35.740023+00:00",
+  "generation": 10,
+  "updated_at": "2026-11-21T04:53:45.057323+00:00",
   "grid_combinations_used": 12,
   "assets": {
     "BTC/EUR": {
@@ -51,10 +51,10 @@
           },
           "walk_forward_score": -1.0,
           "metrics": {
-            "in_sample_return_pct": -3.149,
-            "out_of_sample_return_pct": -8.033,
-            "profit_factor": 0.05,
-            "sample_trades": 15
+            "in_sample_return_pct": -4.072,
+            "out_of_sample_return_pct": -8.459,
+            "profit_factor": 0.04,
+            "sample_trades": 16
           }
         }
       }
@@ -107,10 +107,10 @@
           },
           "walk_forward_score": -1.0,
           "metrics": {
-            "in_sample_return_pct": -5.139,
-            "out_of_sample_return_pct": -5.285,
-            "profit_factor": 0.06,
-            "sample_trades": 13
+            "in_sample_return_pct": -6.278,
+            "out_of_sample_return_pct": -6.81,
+            "profit_factor": 0.05,
+            "sample_trades": 15
           }
         }
       }
@@ -127,9 +127,9 @@
             "tp_atr_mult": 3.8,
             "trail_atr_mult": 2.0
           },
-          "walk_forward_score": -0.7298,
+          "walk_forward_score": -0.7202,
           "metrics": {
-            "in_sample_return_pct": -0.876,
+            "in_sample_return_pct": -0.823,
             "out_of_sample_return_pct": -0.866,
             "profit_factor": 0.0,
             "sample_trades": 2
@@ -163,10 +163,10 @@
           },
           "walk_forward_score": -1.0,
           "metrics": {
-            "in_sample_return_pct": -2.451,
-            "out_of_sample_return_pct": -5.392,
-            "profit_factor": 0.19,
-            "sample_trades": 12
+            "in_sample_return_pct": -4.985,
+            "out_of_sample_return_pct": -6.868,
+            "profit_factor": 0.12,
+            "sample_trades": 15
           }
         }
       }
@@ -185,7 +185,7 @@
           },
           "walk_forward_score": -1.0,
           "metrics": {
-            "in_sample_return_pct": -0.769,
+            "in_sample_return_pct": -0.703,
             "out_of_sample_return_pct": -2.636,
             "profit_factor": 0.04,
             "sample_trades": 5
@@ -219,10 +219,10 @@
           },
           "walk_forward_score": -1.0,
           "metrics": {
-            "in_sample_return_pct": -2.987,
-            "out_of_sample_return_pct": -3.172,
-            "profit_factor": 0.1,
-            "sample_trades": 11
+            "in_sample_return_pct": -5.252,
+            "out_of_sample_return_pct": -4.617,
+            "profit_factor": 0.07,
+            "sample_trades": 14
           }
         }
       }
