@@ -1,6 +1,6 @@
 {
-  "generation": 13,
-  "updated_at": "2026-11-21T23:36:32.319257+00:00",
+  "generation": 14,
+  "updated_at": "2026-11-22T05:55:15.715493+00:00",
   "grid_combinations_used": 12,
   "assets": {
     "BTC/EUR": {
@@ -42,19 +42,19 @@
         },
         "mean_reversion_bb": {
           "params": {
-            "bb_period": 20,
+            "bb_period": 18,
             "bb_std": 2.25,
             "rsi_oversold": 35.0,
             "stop_atr_mult": 1.8,
-            "tp_atr_mult": 3.8,
+            "tp_atr_mult": 2.6,
             "trail_atr_mult": 1.6
           },
           "walk_forward_score": -1.0,
           "metrics": {
             "in_sample_return_pct": -4.181,
-            "out_of_sample_return_pct": -6.7,
+            "out_of_sample_return_pct": -4.359,
             "profit_factor": 0.04,
-            "sample_trades": 14
+            "sample_trades": 12
           }
         }
       }
@@ -108,9 +108,9 @@
           "walk_forward_score": -1.0,
           "metrics": {
             "in_sample_return_pct": -6.577,
-            "out_of_sample_return_pct": -4.62,
-            "profit_factor": 0.05,
-            "sample_trades": 13
+            "out_of_sample_return_pct": -1.501,
+            "profit_factor": 0.08,
+            "sample_trades": 11
           }
         }
       }
@@ -164,9 +164,9 @@
           "walk_forward_score": -1.0,
           "metrics": {
             "in_sample_return_pct": -5.259,
-            "out_of_sample_return_pct": -4.385,
-            "profit_factor": 0.12,
-            "sample_trades": 13
+            "out_of_sample_return_pct": -2.524,
+            "profit_factor": 0.2,
+            "sample_trades": 12
           }
         }
       }
@@ -220,9 +220,9 @@
           "walk_forward_score": -1.0,
           "metrics": {
             "in_sample_return_pct": -3.688,
-            "out_of_sample_return_pct": -2.337,
-            "profit_factor": 0.18,
-            "sample_trades": 12
+            "out_of_sample_return_pct": -2.896,
+            "profit_factor": 0.06,
+            "sample_trades": 11
           }
         }
       }
