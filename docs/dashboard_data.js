@@ -3,9 +3,9 @@ window.BOT_DASHBOARD_DATA = {
   "version": "1.0.0",
   "mode": "paper",
   "exchange": "kraken",
-  "last_run_at": "2026-11-22T17:40:11.035918+00:00",
-  "last_optimized_at": "2026-11-22T12:49:05.708603+00:00",
-  "cycle_count": 90,
+  "last_run_at": "2026-11-22T18:43:05.305022+00:00",
+  "last_optimized_at": "2026-11-22T18:43:05.305022+00:00",
+  "cycle_count": 91,
   "summary": {
     "initial_capital_eur": 40.0,
     "total_ecosystem_eur": 40.0,
@@ -27,7 +27,7 @@ window.BOT_DASHBOARD_DATA = {
     "last_selected_strategy": "Scudo Liquidità EUR (Difesa)"
   },
   "self_improvement": {
-    "generation": 15,
+    "generation": 16,
     "grid_combinations_used": 12,
     "tiers": [
       {
@@ -278,10 +278,10 @@ window.BOT_DASHBOARD_DATA = {
             },
             "walk_forward_score": -1.0,
             "metrics": {
-              "in_sample_return_pct": -3.688,
+              "in_sample_return_pct": -2.712,
               "out_of_sample_return_pct": -2.896,
-              "profit_factor": 0.06,
-              "sample_trades": 11
+              "profit_factor": 0.08,
+              "sample_trades": 10
             }
           }
         }
@@ -290,51 +290,51 @@ window.BOT_DASHBOARD_DATA = {
   },
   "market_overview": {
     "BTC/EUR": {
-      "price_eur": 55854.8,
+      "price_eur": 55437.5,
       "regime": "BEAR_DEFENSIVE",
-      "adx": 26.73,
-      "rsi": 63.59,
+      "adx": 27.47,
+      "rsi": 56.91,
       "atr_pct": 0.99,
-      "slope_pct": -0.249,
-      "confidence": 0.64,
-      "rationale": "Mercato ribassista (Prezzo < EMA150, slope=-0.25%): attiva difesa capitale.",
+      "slope_pct": -0.225,
+      "confidence": 0.63,
+      "rationale": "Mercato ribassista (Prezzo < EMA150, slope=-0.23%): attiva difesa capitale.",
       "selected_strategy": "capital_shield_eur",
       "signal": "HOLD",
       "signal_rationale": "Modalità Scudo EUR attiva: mercato ribassista, capitale protetto."
     },
     "ETH/EUR": {
-      "price_eur": 1571.62,
+      "price_eur": 1563.15,
       "regime": "BEAR_DEFENSIVE",
-      "adx": 26.65,
-      "rsi": 65.64,
-      "atr_pct": 0.99,
-      "slope_pct": -0.239,
+      "adx": 27.32,
+      "rsi": 60.46,
+      "atr_pct": 0.98,
+      "slope_pct": -0.216,
+      "confidence": 0.63,
+      "rationale": "Mercato ribassista (Prezzo < EMA150, slope=-0.22%): attiva difesa capitale.",
+      "selected_strategy": "capital_shield_eur",
+      "signal": "HOLD",
+      "signal_rationale": "Modalità Scudo EUR attiva: mercato ribassista, capitale protetto."
+    },
+    "SOL/EUR": {
+      "price_eur": 64.13,
+      "regime": "BEAR_DEFENSIVE",
+      "adx": 12.75,
+      "rsi": 53.22,
+      "atr_pct": 0.92,
+      "slope_pct": -0.245,
       "confidence": 0.64,
       "rationale": "Mercato ribassista (Prezzo < EMA150, slope=-0.24%): attiva difesa capitale.",
       "selected_strategy": "capital_shield_eur",
       "signal": "HOLD",
       "signal_rationale": "Modalità Scudo EUR attiva: mercato ribassista, capitale protetto."
     },
-    "SOL/EUR": {
-      "price_eur": 64.49,
-      "regime": "BEAR_DEFENSIVE",
-      "adx": 13.31,
-      "rsi": 58.27,
-      "atr_pct": 0.94,
-      "slope_pct": -0.256,
-      "confidence": 0.64,
-      "rationale": "Mercato ribassista (Prezzo < EMA150, slope=-0.26%): attiva difesa capitale.",
-      "selected_strategy": "capital_shield_eur",
-      "signal": "HOLD",
-      "signal_rationale": "Modalità Scudo EUR attiva: mercato ribassista, capitale protetto."
-    },
     "XRP/EUR": {
-      "price_eur": 0.8487,
+      "price_eur": 0.8459,
       "regime": "BEAR_DEFENSIVE",
-      "adx": 12.47,
-      "rsi": 54.94,
-      "atr_pct": 0.93,
-      "slope_pct": -0.269,
+      "adx": 12.24,
+      "rsi": 52.43,
+      "atr_pct": 0.9,
+      "slope_pct": -0.266,
       "confidence": 0.64,
       "rationale": "Mercato ribassista (Prezzo < EMA150, slope=-0.27%): attiva difesa capitale.",
       "selected_strategy": "capital_shield_eur",
@@ -1157,6 +1157,15 @@ window.BOT_DASHBOARD_DATA = {
     },
     {
       "timestamp": "2026-11-22T17:40:11.035918+00:00",
+      "total_equity_eur": 40.0,
+      "user_equity_eur": 40.0,
+      "bot_vault_eur": 0.0,
+      "trading_cash_eur": 40.0,
+      "invested_eur": 0,
+      "regime_summary": "BEAR_DEFENSIVE"
+    },
+    {
+      "timestamp": "2026-11-22T18:43:05.305022+00:00",
       "total_equity_eur": 40.0,
       "user_equity_eur": 40.0,
       "bot_vault_eur": 0.0,
