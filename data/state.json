@@ -2,20 +2,36 @@
   "mode": "paper",
   "exchange_used": "kraken",
   "initial_capital_eur": 40.0,
-  "trading_cash_eur": 40.0,
+  "trading_cash_eur": 21.9712,
   "bot_vault_eur": 0.0,
   "cumulative_realized_net_pnl_eur": 0.0,
   "high_water_mark_pnl_eur": 0.0,
   "cumulative_user_profit_eur": 0.0,
   "peak_user_equity_eur": 40.0,
-  "cycle_count": 105,
+  "cycle_count": 106,
   "current_tier": 1,
   "current_tier_name": "Seed Explorer",
   "last_regime_summary": "RANGE_ACCUMULATION",
-  "last_selected_strategy": "Attesa Setup Ottimale (Cash EUR)",
-  "last_run_at": "2026-11-23T13:12:34.405408+00:00",
+  "last_selected_strategy": "trend_pullback (ETH/EUR)",
+  "last_run_at": "2026-11-23T14:59:06.251361+00:00",
   "last_optimized_at": "2026-11-23T11:04:28.776731+00:00",
-  "positions": {},
+  "positions": {
+    "ETH/EUR": {
+      "symbol": "ETH/EUR",
+      "strategy": "trend_pullback",
+      "regime_at_entry": "RANGE_ACCUMULATION",
+      "entry_price": 1655.457315,
+      "quantity": 0.01087313,
+      "cost_eur": 18.0,
+      "entry_fee_eur": 0.0288,
+      "stop_loss": 1623.724122,
+      "take_profit": 1718.9237,
+      "highest_price": 1655.457315,
+      "trailing_atr_dist": 35.259103,
+      "opened_at": "2026-11-23T14:59:06.251361+00:00",
+      "order_id": "paper-buy-ETH/EUR"
+    }
+  },
   "trade_history": [],
   "equity_curve": [
     {
@@ -970,6 +986,15 @@
       "bot_vault_eur": 0.0,
       "trading_cash_eur": 40.0,
       "invested_eur": 0,
+      "regime_summary": "RANGE_ACCUMULATION"
+    },
+    {
+      "timestamp": "2026-11-23T14:59:06.251361+00:00",
+      "total_equity_eur": 39.9622,
+      "user_equity_eur": 39.9622,
+      "bot_vault_eur": 0.0,
+      "trading_cash_eur": 21.9712,
+      "invested_eur": 17.991,
       "regime_summary": "RANGE_ACCUMULATION"
     }
   ]
