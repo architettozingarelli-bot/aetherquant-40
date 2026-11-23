@@ -1,26 +1,26 @@
 {
-  "generation": 18,
-  "updated_at": "2026-11-23T11:04:36.832975+00:00",
+  "generation": 19,
+  "updated_at": "2026-11-23T17:56:42.259945+00:00",
   "grid_combinations_used": 12,
   "assets": {
     "BTC/EUR": {
       "strategies": {
         "trend_pullback": {
           "params": {
-            "fast_ema": 21,
+            "fast_ema": 15,
             "slow_ema": 89,
             "rsi_low": 38.0,
             "rsi_high": 58.0,
-            "stop_atr_mult": 1.8,
-            "tp_atr_mult": 3.6,
+            "stop_atr_mult": 1.9,
+            "tp_atr_mult": 3.8,
             "trail_atr_mult": 2.0
           },
-          "walk_forward_score": 0.05,
+          "walk_forward_score": 0.3794,
           "metrics": {
             "in_sample_return_pct": 0.0,
-            "out_of_sample_return_pct": 0.0,
-            "profit_factor": 1.0,
-            "sample_trades": 0
+            "out_of_sample_return_pct": 1.092,
+            "profit_factor": 1.6,
+            "sample_trades": 1
           }
         },
         "donchian_breakout": {
@@ -32,12 +32,12 @@
             "tp_atr_mult": 3.6,
             "trail_atr_mult": 2.2
           },
-          "walk_forward_score": -0.3391,
+          "walk_forward_score": -0.0104,
           "metrics": {
             "in_sample_return_pct": -0.703,
-            "out_of_sample_return_pct": 0.0,
-            "profit_factor": 0.6,
-            "sample_trades": 1
+            "out_of_sample_return_pct": 0.851,
+            "profit_factor": 1.2,
+            "sample_trades": 2
           }
         },
         "mean_reversion_bb": {
@@ -63,20 +63,20 @@
       "strategies": {
         "trend_pullback": {
           "params": {
-            "fast_ema": 21,
-            "slow_ema": 89,
+            "fast_ema": 15,
+            "slow_ema": 110,
             "rsi_low": 38.0,
             "rsi_high": 58.0,
-            "stop_atr_mult": 1.8,
-            "tp_atr_mult": 3.6,
+            "stop_atr_mult": 1.6,
+            "tp_atr_mult": 3.8,
             "trail_atr_mult": 2.0
           },
-          "walk_forward_score": 0.05,
+          "walk_forward_score": 0.4854,
           "metrics": {
             "in_sample_return_pct": 0.0,
-            "out_of_sample_return_pct": 0.0,
-            "profit_factor": 1.0,
-            "sample_trades": 0
+            "out_of_sample_return_pct": 1.597,
+            "profit_factor": 1.6,
+            "sample_trades": 1
           }
         },
         "donchian_breakout": {
@@ -88,12 +88,12 @@
             "tp_atr_mult": 4.2,
             "trail_atr_mult": 2.2
           },
-          "walk_forward_score": 0.05,
+          "walk_forward_score": 0.4258,
           "metrics": {
             "in_sample_return_pct": 0.0,
-            "out_of_sample_return_pct": 0.0,
-            "profit_factor": 1.0,
-            "sample_trades": 0
+            "out_of_sample_return_pct": 1.313,
+            "profit_factor": 1.6,
+            "sample_trades": 1
           }
         },
         "mean_reversion_bb": {
@@ -120,19 +120,19 @@
         "trend_pullback": {
           "params": {
             "fast_ema": 15,
-            "slow_ema": 110,
+            "slow_ema": 75,
             "rsi_low": 38.0,
             "rsi_high": 58.0,
             "stop_atr_mult": 1.6,
-            "tp_atr_mult": 3.8,
+            "tp_atr_mult": 4.5,
             "trail_atr_mult": 2.0
           },
-          "walk_forward_score": -0.505,
+          "walk_forward_score": 0.346,
           "metrics": {
             "in_sample_return_pct": 0.0,
-            "out_of_sample_return_pct": -0.866,
-            "profit_factor": 0.4,
-            "sample_trades": 1
+            "out_of_sample_return_pct": 1.566,
+            "profit_factor": 1.91,
+            "sample_trades": 2
           }
         },
         "donchian_breakout": {
@@ -183,12 +183,12 @@
             "tp_atr_mult": 4.5,
             "trail_atr_mult": 2.0
           },
-          "walk_forward_score": -1.0,
+          "walk_forward_score": -0.848,
           "metrics": {
             "in_sample_return_pct": 0.0,
-            "out_of_sample_return_pct": -2.636,
-            "profit_factor": 0.44,
-            "sample_trades": 4
+            "out_of_sample_return_pct": -1.07,
+            "profit_factor": 0.78,
+            "sample_trades": 5
           }
         },
         "donchian_breakout": {
@@ -229,9 +229,9 @@
     }
   },
   "recent_optimization_notes": [
-    "BTC/EUR: miglior strategia evoluta = trend_pullback (WF score +0.05)",
-    "ETH/EUR: miglior strategia evoluta = trend_pullback (WF score +0.05)",
-    "SOL/EUR: miglior strategia evoluta = trend_pullback (WF score -0.51)",
+    "ETH/EUR: miglior strategia evoluta = trend_pullback (WF score +0.49)",
+    "BTC/EUR: miglior strategia evoluta = trend_pullback (WF score +0.38)",
+    "SOL/EUR: miglior strategia evoluta = trend_pullback (WF score +0.35)",
     "XRP/EUR: miglior strategia evoluta = donchian_breakout (WF score -0.56)"
   ]
 }

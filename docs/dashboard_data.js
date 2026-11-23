@@ -3,31 +3,31 @@ window.BOT_DASHBOARD_DATA = {
   "version": "1.0.0",
   "mode": "paper",
   "exchange": "kraken",
-  "last_run_at": "2026-11-23T16:59:16.531333+00:00",
-  "last_optimized_at": "2026-11-23T11:04:28.776731+00:00",
-  "cycle_count": 108,
+  "last_run_at": "2026-11-23T17:56:34.358304+00:00",
+  "last_optimized_at": "2026-11-23T17:56:34.358304+00:00",
+  "cycle_count": 109,
   "summary": {
     "initial_capital_eur": 40.0,
-    "total_ecosystem_eur": 39.66,
-    "user_equity_eur": 39.66,
-    "trading_cash_eur": 21.97,
-    "invested_eur": 17.69,
+    "total_ecosystem_eur": 39.58,
+    "user_equity_eur": 39.58,
+    "trading_cash_eur": 39.58,
+    "invested_eur": 0.0,
     "bot_vault_eur": 0.0,
     "bot_share_pct": 10.0,
     "high_water_mark_pnl_eur": 0.0,
-    "user_roi_pct": -0.85,
-    "total_roi_pct": -0.85,
+    "user_roi_pct": -1.04,
+    "total_roi_pct": -1.04,
     "win_rate_pct": 0.0,
     "profit_factor": 0.0,
-    "total_trades": 0,
-    "current_drawdown_pct": 0.85,
+    "total_trades": 1,
+    "current_drawdown_pct": 1.04,
     "current_tier": 1,
     "current_tier_name": "Seed Explorer",
     "last_regime_summary": "RANGE_ACCUMULATION",
-    "last_selected_strategy": "trend_pullback (ETH/EUR)"
+    "last_selected_strategy": "Attesa Setup Ottimale (Cash EUR)"
   },
   "self_improvement": {
-    "generation": 18,
+    "generation": 19,
     "grid_combinations_used": 12,
     "tiers": [
       {
@@ -56,9 +56,9 @@ window.BOT_DASHBOARD_DATA = {
       }
     ],
     "recent_notes": [
-      "BTC/EUR: miglior strategia evoluta = trend_pullback (WF score +0.05)",
-      "ETH/EUR: miglior strategia evoluta = trend_pullback (WF score +0.05)",
-      "SOL/EUR: miglior strategia evoluta = trend_pullback (WF score -0.51)",
+      "ETH/EUR: miglior strategia evoluta = trend_pullback (WF score +0.49)",
+      "BTC/EUR: miglior strategia evoluta = trend_pullback (WF score +0.38)",
+      "SOL/EUR: miglior strategia evoluta = trend_pullback (WF score +0.35)",
       "XRP/EUR: miglior strategia evoluta = donchian_breakout (WF score -0.56)"
     ],
     "assets_genome": {
@@ -66,20 +66,20 @@ window.BOT_DASHBOARD_DATA = {
         "strategies": {
           "trend_pullback": {
             "params": {
-              "fast_ema": 21,
+              "fast_ema": 15,
               "slow_ema": 89,
               "rsi_low": 38.0,
               "rsi_high": 58.0,
-              "stop_atr_mult": 1.8,
-              "tp_atr_mult": 3.6,
+              "stop_atr_mult": 1.9,
+              "tp_atr_mult": 3.8,
               "trail_atr_mult": 2.0
             },
-            "walk_forward_score": 0.05,
+            "walk_forward_score": 0.3794,
             "metrics": {
               "in_sample_return_pct": 0.0,
-              "out_of_sample_return_pct": 0.0,
-              "profit_factor": 1.0,
-              "sample_trades": 0
+              "out_of_sample_return_pct": 1.092,
+              "profit_factor": 1.6,
+              "sample_trades": 1
             }
           },
           "donchian_breakout": {
@@ -91,12 +91,12 @@ window.BOT_DASHBOARD_DATA = {
               "tp_atr_mult": 3.6,
               "trail_atr_mult": 2.2
             },
-            "walk_forward_score": -0.3391,
+            "walk_forward_score": -0.0104,
             "metrics": {
               "in_sample_return_pct": -0.703,
-              "out_of_sample_return_pct": 0.0,
-              "profit_factor": 0.6,
-              "sample_trades": 1
+              "out_of_sample_return_pct": 0.851,
+              "profit_factor": 1.2,
+              "sample_trades": 2
             }
           },
           "mean_reversion_bb": {
@@ -122,20 +122,20 @@ window.BOT_DASHBOARD_DATA = {
         "strategies": {
           "trend_pullback": {
             "params": {
-              "fast_ema": 21,
-              "slow_ema": 89,
+              "fast_ema": 15,
+              "slow_ema": 110,
               "rsi_low": 38.0,
               "rsi_high": 58.0,
-              "stop_atr_mult": 1.8,
-              "tp_atr_mult": 3.6,
+              "stop_atr_mult": 1.6,
+              "tp_atr_mult": 3.8,
               "trail_atr_mult": 2.0
             },
-            "walk_forward_score": 0.05,
+            "walk_forward_score": 0.4854,
             "metrics": {
               "in_sample_return_pct": 0.0,
-              "out_of_sample_return_pct": 0.0,
-              "profit_factor": 1.0,
-              "sample_trades": 0
+              "out_of_sample_return_pct": 1.597,
+              "profit_factor": 1.6,
+              "sample_trades": 1
             }
           },
           "donchian_breakout": {
@@ -147,12 +147,12 @@ window.BOT_DASHBOARD_DATA = {
               "tp_atr_mult": 4.2,
               "trail_atr_mult": 2.2
             },
-            "walk_forward_score": 0.05,
+            "walk_forward_score": 0.4258,
             "metrics": {
               "in_sample_return_pct": 0.0,
-              "out_of_sample_return_pct": 0.0,
-              "profit_factor": 1.0,
-              "sample_trades": 0
+              "out_of_sample_return_pct": 1.313,
+              "profit_factor": 1.6,
+              "sample_trades": 1
             }
           },
           "mean_reversion_bb": {
@@ -179,19 +179,19 @@ window.BOT_DASHBOARD_DATA = {
           "trend_pullback": {
             "params": {
               "fast_ema": 15,
-              "slow_ema": 110,
+              "slow_ema": 75,
               "rsi_low": 38.0,
               "rsi_high": 58.0,
               "stop_atr_mult": 1.6,
-              "tp_atr_mult": 3.8,
+              "tp_atr_mult": 4.5,
               "trail_atr_mult": 2.0
             },
-            "walk_forward_score": -0.505,
+            "walk_forward_score": 0.346,
             "metrics": {
               "in_sample_return_pct": 0.0,
-              "out_of_sample_return_pct": -0.866,
-              "profit_factor": 0.4,
-              "sample_trades": 1
+              "out_of_sample_return_pct": 1.566,
+              "profit_factor": 1.91,
+              "sample_trades": 2
             }
           },
           "donchian_breakout": {
@@ -242,12 +242,12 @@ window.BOT_DASHBOARD_DATA = {
               "tp_atr_mult": 4.5,
               "trail_atr_mult": 2.0
             },
-            "walk_forward_score": -1.0,
+            "walk_forward_score": -0.848,
             "metrics": {
               "in_sample_return_pct": 0.0,
-              "out_of_sample_return_pct": -2.636,
-              "profit_factor": 0.44,
-              "sample_trades": 4
+              "out_of_sample_return_pct": -1.07,
+              "profit_factor": 0.78,
+              "sample_trades": 5
             }
           },
           "donchian_breakout": {
@@ -290,72 +290,79 @@ window.BOT_DASHBOARD_DATA = {
   },
   "market_overview": {
     "ETH/EUR": {
-      "price_eur": 1626.76,
+      "price_eur": 1623.18,
       "regime": "RANGE_ACCUMULATION",
-      "adx": 35.94,
-      "rsi": 67.67,
-      "atr_pct": 1.32,
-      "slope_pct": 0.051,
+      "adx": 37.49,
+      "rsi": 66.01,
+      "atr_pct": 1.33,
+      "slope_pct": 0.099,
       "confidence": 0.65,
-      "rationale": "Mercato laterale/accumulazione (ADX=35.9, RSI=67.7): ideale per Mean-Reversion selettiva."
+      "rationale": "Mercato laterale/accumulazione (ADX=37.5, RSI=66.0): ideale per Mean-Reversion selettiva.",
+      "selected_strategy": "mean_reversion_bb",
+      "signal": "HOLD",
+      "signal_rationale": "In attesa di setup ad aspettativa positiva (mean_reversion_bb)."
     },
     "BTC/EUR": {
-      "price_eur": 57685.8,
+      "price_eur": 57101.9,
       "regime": "RANGE_ACCUMULATION",
-      "adx": 37.37,
-      "rsi": 68.41,
-      "atr_pct": 1.19,
-      "slope_pct": 0.036,
+      "adx": 38.07,
+      "rsi": 60.56,
+      "atr_pct": 1.24,
+      "slope_pct": 0.066,
       "confidence": 0.65,
-      "rationale": "Mercato laterale/accumulazione (ADX=37.4, RSI=68.4): ideale per Mean-Reversion selettiva.",
+      "rationale": "Mercato laterale/accumulazione (ADX=38.1, RSI=60.6): ideale per Mean-Reversion selettiva.",
       "selected_strategy": "mean_reversion_bb",
       "signal": "HOLD",
       "signal_rationale": "In attesa di setup ad aspettativa positiva (mean_reversion_bb)."
     },
     "SOL/EUR": {
-      "price_eur": 69.4,
+      "price_eur": 68.41,
       "regime": "RANGE_ACCUMULATION",
-      "adx": 33.9,
-      "rsi": 78.04,
-      "atr_pct": 1.44,
-      "slope_pct": 0.328,
+      "adx": 35.18,
+      "rsi": 67.49,
+      "atr_pct": 1.56,
+      "slope_pct": 0.384,
       "confidence": 0.65,
-      "rationale": "Mercato laterale/accumulazione (ADX=33.9, RSI=78.0): ideale per Mean-Reversion selettiva.",
+      "rationale": "Mercato laterale/accumulazione (ADX=35.2, RSI=67.5): ideale per Mean-Reversion selettiva.",
       "selected_strategy": "mean_reversion_bb",
       "signal": "HOLD",
       "signal_rationale": "In attesa di setup ad aspettativa positiva (mean_reversion_bb)."
     },
     "XRP/EUR": {
-      "price_eur": 0.9101,
+      "price_eur": 0.8935,
       "regime": "RANGE_ACCUMULATION",
-      "adx": 25.26,
-      "rsi": 81.93,
-      "atr_pct": 1.37,
-      "slope_pct": 0.163,
+      "adx": 26.7,
+      "rsi": 67.48,
+      "atr_pct": 1.49,
+      "slope_pct": 0.225,
       "confidence": 0.65,
-      "rationale": "Mercato laterale/accumulazione (ADX=25.3, RSI=81.9): ideale per Mean-Reversion selettiva.",
+      "rationale": "Mercato laterale/accumulazione (ADX=26.7, RSI=67.5): ideale per Mean-Reversion selettiva.",
       "selected_strategy": "mean_reversion_bb",
       "signal": "HOLD",
       "signal_rationale": "In attesa di setup ad aspettativa positiva (mean_reversion_bb)."
     }
   },
-  "open_positions": [
+  "open_positions": [],
+  "recent_trades": [
     {
+      "trade_id": "d511013107",
       "symbol": "ETH/EUR",
       "strategy": "trend_pullback",
       "regime": "RANGE_ACCUMULATION",
-      "entry_price": 1655.45732,
-      "current_price": 1626.76,
-      "quantity": 0.010873,
-      "market_value_eur": 17.69,
-      "stop_loss": 1623.72412,
-      "take_profit": 1718.9237,
-      "unrealized_pnl_eur": -0.341,
-      "unrealized_pnl_pct": -1.89,
-      "opened_at": "2026-11-23T14:59:06.251361+00:00"
+      "entry_price": 1655.457315,
+      "exit_price": 1622.36841,
+      "quantity": 0.01087313,
+      "gross_pnl_eur": -0.3598,
+      "fees_eur": 0.057,
+      "net_pnl_eur": -0.4168,
+      "net_pnl_pct": -0.02316,
+      "bot_share_eur": 0.0,
+      "user_share_eur": -0.4168,
+      "exit_reason": "STOP_LOSS_PROTECTION",
+      "opened_at": "2026-11-23T14:59:06.251361+00:00",
+      "closed_at": "2026-11-23T17:56:34.358304+00:00"
     }
   ],
-  "recent_trades": [],
   "equity_curve": [
     {
       "timestamp": "2026-11-17T20:00:00+00:00",
@@ -1336,6 +1343,15 @@ window.BOT_DASHBOARD_DATA = {
       "bot_vault_eur": 0.0,
       "trading_cash_eur": 21.9712,
       "invested_eur": 17.688,
+      "regime_summary": "RANGE_ACCUMULATION"
+    },
+    {
+      "timestamp": "2026-11-23T17:56:34.358304+00:00",
+      "total_equity_eur": 39.5832,
+      "user_equity_eur": 39.5832,
+      "bot_vault_eur": 0.0,
+      "trading_cash_eur": 39.5832,
+      "invested_eur": 0,
       "regime_summary": "RANGE_ACCUMULATION"
     }
   ]
