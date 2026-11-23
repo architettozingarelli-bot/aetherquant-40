@@ -1,6 +1,6 @@
 {
-  "generation": 16,
-  "updated_at": "2026-11-22T18:43:13.363439+00:00",
+  "generation": 17,
+  "updated_at": "2026-11-23T01:02:08.714373+00:00",
   "grid_combinations_used": 12,
   "assets": {
     "BTC/EUR": {
@@ -219,10 +219,10 @@
           },
           "walk_forward_score": -1.0,
           "metrics": {
-            "in_sample_return_pct": -2.712,
+            "in_sample_return_pct": -2.73,
             "out_of_sample_return_pct": -2.896,
-            "profit_factor": 0.08,
-            "sample_trades": 10
+            "profit_factor": 0.07,
+            "sample_trades": 9
           }
         }
       }
