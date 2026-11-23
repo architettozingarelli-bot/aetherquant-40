@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "mode": "paper",
   "exchange": "kraken",
-  "last_run_at": "2026-11-23T09:21:05.385431+00:00",
-  "last_optimized_at": "2026-11-23T01:02:00.482392+00:00",
-  "cycle_count": 102,
+  "last_run_at": "2026-11-23T11:04:28.776731+00:00",
+  "last_optimized_at": "2026-11-23T11:04:28.776731+00:00",
+  "cycle_count": 103,
   "summary": {
     "initial_capital_eur": 40.0,
     "total_ecosystem_eur": 40.0,
@@ -23,11 +23,11 @@
     "current_drawdown_pct": 0.0,
     "current_tier": 1,
     "current_tier_name": "Seed Explorer",
-    "last_regime_summary": "BEAR_DEFENSIVE",
-    "last_selected_strategy": "Scudo Liquidità EUR (Difesa)"
+    "last_regime_summary": "RANGE_ACCUMULATION",
+    "last_selected_strategy": "Attesa Setup Ottimale (Cash EUR)"
   },
   "self_improvement": {
-    "generation": 17,
+    "generation": 18,
     "grid_combinations_used": 12,
     "tiers": [
       {
@@ -290,56 +290,56 @@
   },
   "market_overview": {
     "BTC/EUR": {
-      "price_eur": 55919.5,
+      "price_eur": 55982.3,
       "regime": "BEAR_DEFENSIVE",
-      "adx": 28.51,
-      "rsi": 58.51,
-      "atr_pct": 0.86,
-      "slope_pct": -0.157,
+      "adx": 29.27,
+      "rsi": 59.46,
+      "atr_pct": 0.82,
+      "slope_pct": -0.136,
       "confidence": 0.62,
-      "rationale": "Mercato ribassista (Prezzo < EMA150, slope=-0.16%): attiva difesa capitale.",
+      "rationale": "Mercato ribassista (Prezzo < EMA150, slope=-0.14%): attiva difesa capitale.",
       "selected_strategy": "capital_shield_eur",
       "signal": "HOLD",
       "signal_rationale": "Modalità Scudo EUR attiva: mercato ribassista, capitale protetto."
     },
     "ETH/EUR": {
-      "price_eur": 1568.23,
+      "price_eur": 1571.8,
       "regime": "BEAR_DEFENSIVE",
-      "adx": 28.09,
-      "rsi": 56.26,
-      "atr_pct": 0.86,
-      "slope_pct": -0.152,
+      "adx": 28.21,
+      "rsi": 58.27,
+      "atr_pct": 0.83,
+      "slope_pct": -0.132,
       "confidence": 0.62,
-      "rationale": "Mercato ribassista (Prezzo < EMA150, slope=-0.15%): attiva difesa capitale.",
+      "rationale": "Mercato ribassista (Prezzo < EMA150, slope=-0.13%): attiva difesa capitale.",
       "selected_strategy": "capital_shield_eur",
       "signal": "HOLD",
       "signal_rationale": "Modalità Scudo EUR attiva: mercato ribassista, capitale protetto."
     },
     "SOL/EUR": {
-      "price_eur": 65.87,
+      "price_eur": 65.92,
       "regime": "RANGE_ACCUMULATION",
-      "adx": 15.94,
-      "rsi": 69.22,
-      "atr_pct": 0.85,
-      "slope_pct": -0.08,
+      "adx": 19.53,
+      "rsi": 68.81,
+      "atr_pct": 0.82,
+      "slope_pct": -0.007,
       "confidence": 0.65,
-      "rationale": "Mercato laterale/accumulazione (ADX=15.9, RSI=69.2): ideale per Mean-Reversion selettiva.",
+      "rationale": "Mercato laterale/accumulazione (ADX=19.5, RSI=68.8): ideale per Mean-Reversion selettiva.",
       "selected_strategy": "mean_reversion_bb",
       "signal": "HOLD",
       "signal_rationale": "In attesa di setup ad aspettativa positiva (mean_reversion_bb)."
     },
     "XRP/EUR": {
-      "price_eur": 0.8553,
-      "regime": "BEAR_DEFENSIVE",
-      "adx": 12.79,
-      "rsi": 59.03,
-      "atr_pct": 0.84,
-      "slope_pct": -0.203,
-      "confidence": 0.63,
-      "rationale": "Mercato ribassista (Prezzo < EMA150, slope=-0.20%): attiva difesa capitale.",
-      "selected_strategy": "capital_shield_eur",
+      "price_eur": 0.8568,
+      "regime": "RANGE_ACCUMULATION",
+      "adx": 13.39,
+      "rsi": 59.88,
+      "atr_pct": 0.8,
+      "slope_pct": -0.143,
+      "confidence": 0.65,
+      "rationale": "Mercato laterale/accumulazione (ADX=13.4, RSI=59.9): ideale per Mean-Reversion selettiva.",
+      "selected_strategy": "mean_reversion_bb",
       "signal": "HOLD",
-      "signal_rationale": "Modalità Scudo EUR attiva: mercato ribassista, capitale protetto."
+      "signal_rationale": "In attesa di setup ad aspettativa positiva (mean_reversion_bb)."
     }
   },
   "open_positions": [],
@@ -1271,6 +1271,15 @@
       "trading_cash_eur": 40.0,
       "invested_eur": 0,
       "regime_summary": "BEAR_DEFENSIVE"
+    },
+    {
+      "timestamp": "2026-11-23T11:04:28.776731+00:00",
+      "total_equity_eur": 40.0,
+      "user_equity_eur": 40.0,
+      "bot_vault_eur": 0.0,
+      "trading_cash_eur": 40.0,
+      "invested_eur": 0,
+      "regime_summary": "RANGE_ACCUMULATION"
     }
   ]
 }
