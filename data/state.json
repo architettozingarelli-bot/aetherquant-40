@@ -8,12 +8,12 @@
   "high_water_mark_pnl_eur": 0.0,
   "cumulative_user_profit_eur": 0.0,
   "peak_user_equity_eur": 40.0,
-  "cycle_count": 106,
+  "cycle_count": 107,
   "current_tier": 1,
   "current_tier_name": "Seed Explorer",
   "last_regime_summary": "RANGE_ACCUMULATION",
   "last_selected_strategy": "trend_pullback (ETH/EUR)",
-  "last_run_at": "2026-11-23T14:59:06.251361+00:00",
+  "last_run_at": "2026-11-23T16:00:23.954953+00:00",
   "last_optimized_at": "2026-11-23T11:04:28.776731+00:00",
   "positions": {
     "ETH/EUR": {
@@ -995,6 +995,15 @@
       "bot_vault_eur": 0.0,
       "trading_cash_eur": 21.9712,
       "invested_eur": 17.991,
+      "regime_summary": "RANGE_ACCUMULATION"
+    },
+    {
+      "timestamp": "2026-11-23T16:00:23.954953+00:00",
+      "total_equity_eur": 39.6592,
+      "user_equity_eur": 39.6592,
+      "bot_vault_eur": 0.0,
+      "trading_cash_eur": 21.9712,
+      "invested_eur": 17.688,
       "regime_summary": "RANGE_ACCUMULATION"
     }
   ]
