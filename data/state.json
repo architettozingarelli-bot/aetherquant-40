@@ -2,20 +2,36 @@
   "mode": "paper",
   "exchange_used": "kraken",
   "initial_capital_eur": 40.0,
-  "trading_cash_eur": 39.5832,
+  "trading_cash_eur": 21.7423,
   "bot_vault_eur": 0.0,
   "cumulative_realized_net_pnl_eur": -0.4168,
   "high_water_mark_pnl_eur": 0.0,
   "cumulative_user_profit_eur": -0.4168,
   "peak_user_equity_eur": 40.0,
-  "cycle_count": 115,
+  "cycle_count": 116,
   "current_tier": 1,
   "current_tier_name": "Seed Explorer",
   "last_regime_summary": "BEAR_DEFENSIVE",
-  "last_selected_strategy": "Scudo Liquidità EUR (Difesa)",
-  "last_run_at": "2026-11-23T23:48:00.686727+00:00",
+  "last_selected_strategy": "trend_pullback (SOL/EUR)",
+  "last_run_at": "2026-11-24T01:01:46.502670+00:00",
   "last_optimized_at": "2026-11-23T23:48:00.686727+00:00",
-  "positions": {},
+  "positions": {
+    "SOL/EUR": {
+      "symbol": "SOL/EUR",
+      "strategy": "trend_pullback",
+      "regime_at_entry": "RANGE_ACCUMULATION",
+      "entry_price": 66.143055,
+      "quantity": 0.26930114,
+      "cost_eur": 17.8124,
+      "entry_fee_eur": 0.0285,
+      "stop_loss": 64.65421,
+      "take_profit": 70.330432,
+      "highest_price": 66.143055,
+      "trailing_atr_dist": 1.861057,
+      "opened_at": "2026-11-24T01:01:46.502670+00:00",
+      "order_id": "paper-buy-SOL/EUR"
+    }
+  },
   "trade_history": [
     {
       "trade_id": "d511013107",
@@ -1079,6 +1095,15 @@
       "bot_vault_eur": 0.0,
       "trading_cash_eur": 39.5832,
       "invested_eur": 0,
+      "regime_summary": "BEAR_DEFENSIVE"
+    },
+    {
+      "timestamp": "2026-11-24T01:01:46.502670+00:00",
+      "total_equity_eur": 39.5458,
+      "user_equity_eur": 39.5458,
+      "bot_vault_eur": 0.0,
+      "trading_cash_eur": 21.7423,
+      "invested_eur": 17.8035,
       "regime_summary": "BEAR_DEFENSIVE"
     }
   ]
