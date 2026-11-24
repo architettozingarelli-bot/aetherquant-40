@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "mode": "paper",
   "exchange": "kraken",
-  "last_run_at": "2026-11-24T05:02:06.557943+00:00",
+  "last_run_at": "2026-11-24T05:59:42.799466+00:00",
   "last_optimized_at": "2026-11-23T23:48:00.686727+00:00",
-  "cycle_count": 119,
+  "cycle_count": 120,
   "summary": {
     "initial_capital_eur": 40.0,
     "total_ecosystem_eur": 39.38,
@@ -1449,6 +1449,15 @@
     },
     {
       "timestamp": "2026-11-24T05:02:06.557943+00:00",
+      "total_equity_eur": 39.3842,
+      "user_equity_eur": 39.3842,
+      "bot_vault_eur": 0.0,
+      "trading_cash_eur": 21.7423,
+      "invested_eur": 17.6419,
+      "regime_summary": "BEAR_DEFENSIVE"
+    },
+    {
+      "timestamp": "2026-11-24T05:59:42.799466+00:00",
       "total_equity_eur": 39.3842,
       "user_equity_eur": 39.3842,
       "bot_vault_eur": 0.0,
