@@ -8,12 +8,12 @@
   "high_water_mark_pnl_eur": 0.0,
   "cumulative_user_profit_eur": -0.4168,
   "peak_user_equity_eur": 40.0,
-  "cycle_count": 118,
+  "cycle_count": 119,
   "current_tier": 1,
   "current_tier_name": "Seed Explorer",
   "last_regime_summary": "BEAR_DEFENSIVE",
   "last_selected_strategy": "trend_pullback (SOL/EUR)",
-  "last_run_at": "2026-11-24T03:56:49.770164+00:00",
+  "last_run_at": "2026-11-24T05:02:06.557943+00:00",
   "last_optimized_at": "2026-11-23T23:48:00.686727+00:00",
   "positions": {
     "SOL/EUR": {
@@ -1122,6 +1122,15 @@
       "bot_vault_eur": 0.0,
       "trading_cash_eur": 21.7423,
       "invested_eur": 17.51,
+      "regime_summary": "BEAR_DEFENSIVE"
+    },
+    {
+      "timestamp": "2026-11-24T05:02:06.557943+00:00",
+      "total_equity_eur": 39.3842,
+      "user_equity_eur": 39.3842,
+      "bot_vault_eur": 0.0,
+      "trading_cash_eur": 21.7423,
+      "invested_eur": 17.6419,
       "regime_summary": "BEAR_DEFENSIVE"
     }
   ]
