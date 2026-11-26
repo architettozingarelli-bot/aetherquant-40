@@ -3,9 +3,9 @@ window.BOT_DASHBOARD_DATA = {
   "version": "1.0.0",
   "mode": "paper",
   "exchange": "kraken",
-  "last_run_at": "2026-11-26T07:16:50.150277+00:00",
+  "last_run_at": "2026-11-26T09:00:16.883310+00:00",
   "last_optimized_at": "2026-11-26T03:57:01.129264+00:00",
-  "cycle_count": 160,
+  "cycle_count": 161,
   "summary": {
     "initial_capital_eur": 40.0,
     "total_ecosystem_eur": 39.11,
@@ -23,8 +23,8 @@ window.BOT_DASHBOARD_DATA = {
     "current_drawdown_pct": 2.22,
     "current_tier": 1,
     "current_tier_name": "Seed Explorer",
-    "last_regime_summary": "BEAR_DEFENSIVE",
-    "last_selected_strategy": "Scudo Liquidità EUR (Difesa)"
+    "last_regime_summary": "RANGE_ACCUMULATION",
+    "last_selected_strategy": "Attesa Setup Ottimale (Cash EUR)"
   },
   "self_improvement": {
     "generation": 27,
@@ -290,53 +290,53 @@ window.BOT_DASHBOARD_DATA = {
   },
   "market_overview": {
     "BTC/EUR": {
-      "price_eur": 55163.4,
-      "regime": "BEAR_DEFENSIVE",
-      "adx": 26.9,
-      "rsi": 57.84,
-      "atr_pct": 0.95,
-      "slope_pct": -0.052,
-      "confidence": 0.61,
-      "rationale": "Mercato ribassista (Prezzo < EMA150, slope=-0.05%): attiva difesa capitale.",
-      "selected_strategy": "capital_shield_eur",
+      "price_eur": 55464.6,
+      "regime": "RANGE_ACCUMULATION",
+      "adx": 26.67,
+      "rsi": 61.77,
+      "atr_pct": 0.9,
+      "slope_pct": -0.031,
+      "confidence": 0.65,
+      "rationale": "Mercato laterale/accumulazione (ADX=26.7, RSI=61.8): ideale per Mean-Reversion selettiva.",
+      "selected_strategy": "mean_reversion_bb",
       "signal": "HOLD",
-      "signal_rationale": "Modalità Scudo EUR attiva: mercato ribassista, capitale protetto."
+      "signal_rationale": "In attesa di setup ad aspettativa positiva (mean_reversion_bb)."
     },
     "ETH/EUR": {
-      "price_eur": 1537.19,
+      "price_eur": 1549.41,
       "regime": "BEAR_DEFENSIVE",
-      "adx": 26.14,
-      "rsi": 52.96,
-      "atr_pct": 1.01,
-      "slope_pct": -0.105,
-      "confidence": 0.62,
-      "rationale": "Mercato ribassista (Prezzo < EMA150, slope=-0.11%): attiva difesa capitale.",
+      "adx": 25.15,
+      "rsi": 59.67,
+      "atr_pct": 0.95,
+      "slope_pct": -0.093,
+      "confidence": 0.61,
+      "rationale": "Mercato ribassista (Prezzo < EMA150, slope=-0.09%): attiva difesa capitale.",
       "selected_strategy": "capital_shield_eur",
       "signal": "HOLD",
       "signal_rationale": "Modalità Scudo EUR attiva: mercato ribassista, capitale protetto."
     },
     "SOL/EUR": {
-      "price_eur": 64.4,
-      "regime": "BEAR_DEFENSIVE",
-      "adx": 29.6,
-      "rsi": 58.37,
-      "atr_pct": 1.02,
-      "slope_pct": -0.011,
-      "confidence": 0.6,
-      "rationale": "Mercato ribassista (Prezzo < EMA150, slope=-0.01%): attiva difesa capitale.",
-      "selected_strategy": "capital_shield_eur",
+      "price_eur": 64.74,
+      "regime": "RANGE_ACCUMULATION",
+      "adx": 29.51,
+      "rsi": 62.18,
+      "atr_pct": 0.95,
+      "slope_pct": 0.007,
+      "confidence": 0.65,
+      "rationale": "Mercato laterale/accumulazione (ADX=29.5, RSI=62.2): ideale per Mean-Reversion selettiva.",
+      "selected_strategy": "mean_reversion_bb",
       "signal": "HOLD",
-      "signal_rationale": "Modalità Scudo EUR attiva: mercato ribassista, capitale protetto."
+      "signal_rationale": "In attesa di setup ad aspettativa positiva (mean_reversion_bb)."
     },
     "XRP/EUR": {
-      "price_eur": 0.8655,
+      "price_eur": 0.8717,
       "regime": "RANGE_ACCUMULATION",
-      "adx": 26.92,
-      "rsi": 60.79,
-      "atr_pct": 1.01,
-      "slope_pct": 0.148,
+      "adx": 26.63,
+      "rsi": 64.82,
+      "atr_pct": 0.96,
+      "slope_pct": 0.194,
       "confidence": 0.65,
-      "rationale": "Mercato laterale/accumulazione (ADX=26.9, RSI=60.8): ideale per Mean-Reversion selettiva.",
+      "rationale": "Mercato laterale/accumulazione (ADX=26.6, RSI=64.8): ideale per Mean-Reversion selettiva.",
       "selected_strategy": "mean_reversion_bb",
       "signal": "HOLD",
       "signal_rationale": "In attesa di setup ad aspettativa positiva (mean_reversion_bb)."
@@ -1830,6 +1830,15 @@ window.BOT_DASHBOARD_DATA = {
       "trading_cash_eur": 39.1107,
       "invested_eur": 0,
       "regime_summary": "BEAR_DEFENSIVE"
+    },
+    {
+      "timestamp": "2026-11-26T09:00:16.883310+00:00",
+      "total_equity_eur": 39.1107,
+      "user_equity_eur": 39.1107,
+      "bot_vault_eur": 0.0,
+      "trading_cash_eur": 39.1107,
+      "invested_eur": 0,
+      "regime_summary": "RANGE_ACCUMULATION"
     }
   ]
 };
