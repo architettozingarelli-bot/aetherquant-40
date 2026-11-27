@@ -8,12 +8,12 @@
   "high_water_mark_pnl_eur": 0.0,
   "cumulative_user_profit_eur": -0.8893,
   "peak_user_equity_eur": 40.0,
-  "cycle_count": 177,
+  "cycle_count": 178,
   "current_tier": 1,
   "current_tier_name": "Seed Explorer",
   "last_regime_summary": "RANGE_ACCUMULATION",
   "last_selected_strategy": "donchian_breakout (ETH/EUR)",
-  "last_run_at": "2026-11-27T03:58:12.929041+00:00",
+  "last_run_at": "2026-11-27T05:03:53.982085+00:00",
   "last_optimized_at": "2026-11-27T01:12:15.458732+00:00",
   "positions": {
     "ETH/EUR": {
@@ -26,7 +26,7 @@
       "entry_fee_eur": 0.0282,
       "stop_loss": 1541.83896,
       "take_profit": 1621.67774,
-      "highest_price": 1567.593405,
+      "highest_price": 1585.0,
       "trailing_atr_dist": 28.32989,
       "opened_at": "2026-11-27T03:58:12.929041+00:00",
       "order_id": "paper-buy-ETH/EUR"
@@ -1671,6 +1671,15 @@
       "bot_vault_eur": 0.0,
       "trading_cash_eur": 21.4827,
       "invested_eur": 17.591,
+      "regime_summary": "RANGE_ACCUMULATION"
+    },
+    {
+      "timestamp": "2026-11-27T05:03:53.982085+00:00",
+      "total_equity_eur": 39.1815,
+      "user_equity_eur": 39.1815,
+      "bot_vault_eur": 0.0,
+      "trading_cash_eur": 21.4827,
+      "invested_eur": 17.6988,
       "regime_summary": "RANGE_ACCUMULATION"
     }
   ]
