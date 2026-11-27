@@ -3,9 +3,9 @@ window.BOT_DASHBOARD_DATA = {
   "version": "1.0.0",
   "mode": "paper",
   "exchange": "kraken",
-  "last_run_at": "2026-11-26T23:53:54.312429+00:00",
-  "last_optimized_at": "2026-11-26T18:55:47.348456+00:00",
-  "cycle_count": 174,
+  "last_run_at": "2026-11-27T01:12:15.458732+00:00",
+  "last_optimized_at": "2026-11-27T01:12:15.458732+00:00",
+  "cycle_count": 175,
   "summary": {
     "initial_capital_eur": 40.0,
     "total_ecosystem_eur": 39.11,
@@ -27,7 +27,7 @@ window.BOT_DASHBOARD_DATA = {
     "last_selected_strategy": "Attesa Setup Ottimale (Cash EUR)"
   },
   "self_improvement": {
-    "generation": 29,
+    "generation": 30,
     "grid_combinations_used": 12,
     "tiers": [
       {
@@ -110,10 +110,10 @@ window.BOT_DASHBOARD_DATA = {
             },
             "walk_forward_score": -1.0,
             "metrics": {
-              "in_sample_return_pct": -7.567,
-              "out_of_sample_return_pct": -2.687,
-              "profit_factor": 0.14,
-              "sample_trades": 12
+              "in_sample_return_pct": -9.604,
+              "out_of_sample_return_pct": -1.723,
+              "profit_factor": 0.2,
+              "sample_trades": 13
             }
           }
         }
@@ -178,18 +178,18 @@ window.BOT_DASHBOARD_DATA = {
         "strategies": {
           "trend_pullback": {
             "params": {
-              "fast_ema": 21,
-              "slow_ema": 110,
+              "fast_ema": 15,
+              "slow_ema": 89,
               "rsi_low": 38.0,
               "rsi_high": 58.0,
-              "stop_atr_mult": 2.2,
+              "stop_atr_mult": 1.9,
               "tp_atr_mult": 3.8,
               "trail_atr_mult": 2.0
             },
             "walk_forward_score": -1.0,
             "metrics": {
-              "in_sample_return_pct": -1.12,
-              "out_of_sample_return_pct": -1.638,
+              "in_sample_return_pct": -1.195,
+              "out_of_sample_return_pct": -1.44,
               "profit_factor": 0.0,
               "sample_trades": 2
             }
@@ -290,53 +290,53 @@ window.BOT_DASHBOARD_DATA = {
   },
   "market_overview": {
     "BTC/EUR": {
-      "price_eur": 55118.7,
+      "price_eur": 55295.2,
       "regime": "RANGE_ACCUMULATION",
-      "adx": 15.84,
-      "rsi": 50.91,
-      "atr_pct": 0.68,
-      "slope_pct": -0.049,
+      "adx": 14.18,
+      "rsi": 55.19,
+      "atr_pct": 0.63,
+      "slope_pct": -0.047,
       "confidence": 0.65,
-      "rationale": "Mercato laterale/accumulazione (ADX=15.8, RSI=50.9): ideale per Mean-Reversion selettiva.",
+      "rationale": "Mercato laterale/accumulazione (ADX=14.2, RSI=55.2): ideale per Mean-Reversion selettiva.",
       "selected_strategy": "mean_reversion_bb",
       "signal": "HOLD",
       "signal_rationale": "In attesa di setup ad aspettativa positiva (mean_reversion_bb)."
     },
     "ETH/EUR": {
-      "price_eur": 1541.86,
+      "price_eur": 1549.94,
       "regime": "RANGE_ACCUMULATION",
-      "adx": 16.86,
-      "rsi": 49.31,
-      "atr_pct": 0.75,
-      "slope_pct": -0.072,
+      "adx": 15.68,
+      "rsi": 55.21,
+      "atr_pct": 0.74,
+      "slope_pct": -0.067,
       "confidence": 0.65,
-      "rationale": "Mercato laterale/accumulazione (ADX=16.9, RSI=49.3): ideale per Mean-Reversion selettiva.",
-      "selected_strategy": "mean_reversion_bb",
-      "signal": "HOLD",
-      "signal_rationale": "In attesa di setup ad aspettativa positiva (mean_reversion_bb)."
+      "rationale": "Mercato laterale/accumulazione (ADX=15.7, RSI=55.2): ideale per Mean-Reversion selettiva.",
+      "selected_strategy": "trend_pullback",
+      "signal": "BUY",
+      "signal_rationale": "Pullback rialzista su EMA28 confermato (RSI 46.9->55.2, WF=+0.44)."
     },
     "SOL/EUR": {
-      "price_eur": 64.66,
+      "price_eur": 64.92,
       "regime": "RANGE_ACCUMULATION",
-      "adx": 18.03,
-      "rsi": 53.25,
-      "atr_pct": 0.83,
-      "slope_pct": 0.038,
+      "adx": 16.34,
+      "rsi": 57.45,
+      "atr_pct": 0.79,
+      "slope_pct": 0.042,
       "confidence": 0.65,
-      "rationale": "Mercato laterale/accumulazione (ADX=18.0, RSI=53.2): ideale per Mean-Reversion selettiva.",
+      "rationale": "Mercato laterale/accumulazione (ADX=16.3, RSI=57.4): ideale per Mean-Reversion selettiva.",
       "selected_strategy": "mean_reversion_bb",
       "signal": "HOLD",
       "signal_rationale": "In attesa di setup ad aspettativa positiva (mean_reversion_bb)."
     },
     "XRP/EUR": {
-      "price_eur": 0.8619,
+      "price_eur": 0.8622,
       "regime": "RANGE_ACCUMULATION",
-      "adx": 16.21,
-      "rsi": 49.36,
-      "atr_pct": 0.76,
-      "slope_pct": 0.129,
+      "adx": 15.82,
+      "rsi": 50.02,
+      "atr_pct": 0.73,
+      "slope_pct": 0.118,
       "confidence": 0.65,
-      "rationale": "Mercato laterale/accumulazione (ADX=16.2, RSI=49.4): ideale per Mean-Reversion selettiva.",
+      "rationale": "Mercato laterale/accumulazione (ADX=15.8, RSI=50.0): ideale per Mean-Reversion selettiva.",
       "selected_strategy": "mean_reversion_bb",
       "signal": "HOLD",
       "signal_rationale": "In attesa di setup ad aspettativa positiva (mean_reversion_bb)."
@@ -1950,6 +1950,15 @@ window.BOT_DASHBOARD_DATA = {
     },
     {
       "timestamp": "2026-11-26T23:53:54.312429+00:00",
+      "total_equity_eur": 39.1107,
+      "user_equity_eur": 39.1107,
+      "bot_vault_eur": 0.0,
+      "trading_cash_eur": 39.1107,
+      "invested_eur": 0,
+      "regime_summary": "RANGE_ACCUMULATION"
+    },
+    {
+      "timestamp": "2026-11-27T01:12:15.458732+00:00",
       "total_equity_eur": 39.1107,
       "user_equity_eur": 39.1107,
       "bot_vault_eur": 0.0,
