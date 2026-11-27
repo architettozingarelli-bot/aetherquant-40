@@ -3,31 +3,31 @@
   "version": "1.0.0",
   "mode": "paper",
   "exchange": "kraken",
-  "last_run_at": "2026-11-27T14:52:43.528999+00:00",
-  "last_optimized_at": "2026-11-27T09:00:20.236328+00:00",
-  "cycle_count": 186,
+  "last_run_at": "2026-11-27T15:57:41.919556+00:00",
+  "last_optimized_at": "2026-11-27T15:57:41.919556+00:00",
+  "cycle_count": 187,
   "summary": {
     "initial_capital_eur": 40.0,
-    "total_ecosystem_eur": 39.15,
-    "user_equity_eur": 39.15,
-    "trading_cash_eur": 21.48,
-    "invested_eur": 17.66,
+    "total_ecosystem_eur": 38.39,
+    "user_equity_eur": 38.39,
+    "trading_cash_eur": 38.39,
+    "invested_eur": 0.0,
     "bot_vault_eur": 0.0,
     "bot_share_pct": 10.0,
     "high_water_mark_pnl_eur": 0.0,
-    "user_roi_pct": -2.13,
-    "total_roi_pct": -2.13,
+    "user_roi_pct": -4.03,
+    "total_roi_pct": -4.03,
     "win_rate_pct": 0.0,
     "profit_factor": 0.0,
-    "total_trades": 2,
-    "current_drawdown_pct": 2.13,
+    "total_trades": 3,
+    "current_drawdown_pct": 4.03,
     "current_tier": 1,
     "current_tier_name": "Seed Explorer",
-    "last_regime_summary": "BULL_TREND",
-    "last_selected_strategy": "donchian_breakout (ETH/EUR)"
+    "last_regime_summary": "RANGE_ACCUMULATION",
+    "last_selected_strategy": "Attesa Setup Ottimale (Cash EUR)"
   },
   "self_improvement": {
-    "generation": 31,
+    "generation": 32,
     "grid_combinations_used": 12,
     "tiers": [
       {
@@ -57,8 +57,8 @@
     ],
     "recent_notes": [
       "ETH/EUR: miglior strategia evoluta = trend_pullback (WF score +0.47)",
-      "BTC/EUR: miglior strategia evoluta = donchian_breakout (WF score -0.01)",
-      "SOL/EUR: miglior strategia evoluta = donchian_breakout (WF score -0.53)",
+      "BTC/EUR: miglior strategia evoluta = donchian_breakout (WF score +0.33)",
+      "SOL/EUR: miglior strategia evoluta = donchian_breakout (WF score -0.15)",
       "XRP/EUR: miglior strategia evoluta = donchian_breakout (WF score +0.08)"
     ],
     "assets_genome": {
@@ -74,29 +74,29 @@
               "tp_atr_mult": 4.5,
               "trail_atr_mult": 2.0
             },
-            "walk_forward_score": -0.3054,
+            "walk_forward_score": -0.2995,
             "metrics": {
               "in_sample_return_pct": 0.0,
-              "out_of_sample_return_pct": -0.111,
-              "profit_factor": 0.96,
-              "sample_trades": 2
+              "out_of_sample_return_pct": -0.092,
+              "profit_factor": 0.97,
+              "sample_trades": 3
             }
           },
           "donchian_breakout": {
             "params": {
-              "channel_period": 16,
-              "vol_mult": 1.3,
+              "channel_period": 28,
+              "vol_mult": 1.0,
               "rsi_max": 74.0,
               "stop_atr_mult": 1.8,
-              "tp_atr_mult": 3.6,
+              "tp_atr_mult": 4.4,
               "trail_atr_mult": 2.2
             },
-            "walk_forward_score": -0.0104,
+            "walk_forward_score": 0.3287,
             "metrics": {
-              "in_sample_return_pct": -0.703,
+              "in_sample_return_pct": 0.0,
               "out_of_sample_return_pct": 0.851,
-              "profit_factor": 1.2,
-              "sample_trades": 2
+              "profit_factor": 1.6,
+              "sample_trades": 1
             }
           },
           "mean_reversion_bb": {
@@ -110,10 +110,10 @@
             },
             "walk_forward_score": -1.0,
             "metrics": {
-              "in_sample_return_pct": -9.604,
+              "in_sample_return_pct": -10.796,
               "out_of_sample_return_pct": -1.723,
               "profit_factor": 0.2,
-              "sample_trades": 13
+              "sample_trades": 14
             }
           }
         }
@@ -147,12 +147,12 @@
               "tp_atr_mult": 4.2,
               "trail_atr_mult": 2.2
             },
-            "walk_forward_score": 0.4258,
+            "walk_forward_score": 0.4413,
             "metrics": {
               "in_sample_return_pct": 0.0,
-              "out_of_sample_return_pct": 1.313,
+              "out_of_sample_return_pct": 1.387,
               "profit_factor": 1.6,
-              "sample_trades": 1
+              "sample_trades": 2
             }
           },
           "mean_reversion_bb": {
@@ -166,10 +166,10 @@
             },
             "walk_forward_score": -1.0,
             "metrics": {
-              "in_sample_return_pct": -6.009,
+              "in_sample_return_pct": -7.523,
               "out_of_sample_return_pct": -1.61,
               "profit_factor": 0.01,
-              "sample_trades": 8
+              "sample_trades": 9
             }
           }
         }
@@ -203,12 +203,12 @@
               "tp_atr_mult": 3.6,
               "trail_atr_mult": 2.2
             },
-            "walk_forward_score": -0.53,
+            "walk_forward_score": -0.1469,
             "metrics": {
               "in_sample_return_pct": -1.265,
-              "out_of_sample_return_pct": 0.0,
-              "profit_factor": 0.6,
-              "sample_trades": 1
+              "out_of_sample_return_pct": 1.11,
+              "profit_factor": 1.2,
+              "sample_trades": 2
             }
           },
           "mean_reversion_bb": {
@@ -222,10 +222,10 @@
             },
             "walk_forward_score": -1.0,
             "metrics": {
-              "in_sample_return_pct": -5.375,
+              "in_sample_return_pct": -6.85,
               "out_of_sample_return_pct": -3.771,
               "profit_factor": 0.08,
-              "sample_trades": 10
+              "sample_trades": 11
             }
           }
         }
@@ -269,19 +269,19 @@
           },
           "mean_reversion_bb": {
             "params": {
-              "bb_period": 20,
-              "bb_std": 1.85,
-              "rsi_oversold": 30.0,
+              "bb_period": 18,
+              "bb_std": 2.25,
+              "rsi_oversold": 35.0,
               "stop_atr_mult": 1.8,
-              "tp_atr_mult": 3.2,
+              "tp_atr_mult": 2.6,
               "trail_atr_mult": 1.6
             },
             "walk_forward_score": -1.0,
             "metrics": {
-              "in_sample_return_pct": -3.154,
-              "out_of_sample_return_pct": -2.896,
+              "in_sample_return_pct": -4.15,
+              "out_of_sample_return_pct": -1.392,
               "profit_factor": 0.06,
-              "sample_trades": 7
+              "sample_trades": 8
             }
           }
         }
@@ -290,72 +290,78 @@
   },
   "market_overview": {
     "ETH/EUR": {
-      "price_eur": 1573.26,
-      "regime": "RANGE_ACCUMULATION",
-      "adx": 24.47,
-      "rsi": 60.25,
-      "atr_pct": 0.72,
-      "slope_pct": 0.151,
-      "confidence": 0.65,
-      "rationale": "Mercato laterale/accumulazione (ADX=24.5, RSI=60.3): ideale per Mean-Reversion selettiva."
+      "price_eur": 1508.99,
+      "regime": "BEAR_DEFENSIVE",
+      "adx": 24.89,
+      "rsi": 27.64,
+      "atr_pct": 1.03,
+      "slope_pct": 0.084,
+      "confidence": 0.61,
+      "rationale": "Mercato ribassista (Prezzo < EMA150, slope=+0.08%): attiva difesa capitale.",
+      "selected_strategy": "capital_shield_eur",
+      "signal": "HOLD",
+      "signal_rationale": "Modalità Scudo EUR attiva: mercato ribassista, capitale protetto."
     },
     "BTC/EUR": {
-      "price_eur": 56081.2,
+      "price_eur": 54016.7,
+      "regime": "BEAR_DEFENSIVE",
+      "adx": 28.7,
+      "rsi": 25.72,
+      "atr_pct": 0.89,
+      "slope_pct": 0.095,
+      "confidence": 0.61,
+      "rationale": "Mercato ribassista (Prezzo < EMA150, slope=+0.09%): attiva difesa capitale.",
+      "selected_strategy": "capital_shield_eur",
+      "signal": "HOLD",
+      "signal_rationale": "Modalità Scudo EUR attiva: mercato ribassista, capitale protetto."
+    },
+    "SOL/EUR": {
+      "price_eur": 64.68,
       "regime": "RANGE_ACCUMULATION",
-      "adx": 27.96,
-      "rsi": 63.57,
-      "atr_pct": 0.62,
-      "slope_pct": 0.149,
+      "adx": 31.83,
+      "rsi": 39.18,
+      "atr_pct": 1.0,
+      "slope_pct": 0.318,
       "confidence": 0.65,
-      "rationale": "Mercato laterale/accumulazione (ADX=28.0, RSI=63.6): ideale per Mean-Reversion selettiva.",
+      "rationale": "Mercato laterale/accumulazione (ADX=31.8, RSI=39.2): ideale per Mean-Reversion selettiva.",
       "selected_strategy": "mean_reversion_bb",
       "signal": "HOLD",
       "signal_rationale": "In attesa di setup ad aspettativa positiva (mean_reversion_bb)."
     },
-    "SOL/EUR": {
-      "price_eur": 66.96,
-      "regime": "BULL_TREND",
-      "adx": 33.06,
-      "rsi": 70.02,
-      "atr_pct": 0.75,
-      "slope_pct": 0.361,
-      "confidence": 0.8,
-      "rationale": "Trend rialzista confermato (Prezzo > EMA150, ADX=33.1, slope=+0.36%).",
-      "selected_strategy": "trend_pullback",
-      "signal": "HOLD",
-      "signal_rationale": "In attesa di setup ad aspettativa positiva (trend_pullback)."
-    },
     "XRP/EUR": {
-      "price_eur": 0.8843,
-      "regime": "BULL_TREND",
-      "adx": 26.87,
-      "rsi": 59.92,
-      "atr_pct": 0.73,
-      "slope_pct": 0.398,
-      "confidence": 0.7,
-      "rationale": "Trend rialzista confermato (Prezzo > EMA150, ADX=26.9, slope=+0.40%).",
-      "selected_strategy": "trend_pullback",
+      "price_eur": 0.8566,
+      "regime": "RANGE_ACCUMULATION",
+      "adx": 26.42,
+      "rsi": 35.64,
+      "atr_pct": 0.95,
+      "slope_pct": 0.351,
+      "confidence": 0.65,
+      "rationale": "Mercato laterale/accumulazione (ADX=26.4, RSI=35.6): ideale per Mean-Reversion selettiva.",
+      "selected_strategy": "mean_reversion_bb",
       "signal": "HOLD",
-      "signal_rationale": "In attesa di setup ad aspettativa positiva (trend_pullback)."
+      "signal_rationale": "In attesa di setup ad aspettativa positiva (mean_reversion_bb)."
     }
   },
-  "open_positions": [
+  "open_positions": [],
+  "recent_trades": [
     {
+      "trade_id": "a33e1444aa",
       "symbol": "ETH/EUR",
       "strategy": "donchian_breakout",
       "regime": "RANGE_ACCUMULATION",
-      "entry_price": 1567.59341,
-      "current_price": 1573.26,
-      "quantity": 0.011227,
-      "market_value_eur": 17.66,
-      "stop_loss": 1541.83896,
-      "take_profit": 1621.67774,
-      "unrealized_pnl_eur": 0.035,
-      "unrealized_pnl_pct": 0.2,
-      "opened_at": "2026-11-27T03:58:12.929041+00:00"
-    }
-  ],
-  "recent_trades": [
+      "entry_price": 1567.593405,
+      "exit_price": 1508.235505,
+      "quantity": 0.01122727,
+      "gross_pnl_eur": -0.6664,
+      "fees_eur": 0.0553,
+      "net_pnl_eur": -0.7217,
+      "net_pnl_pct": -0.04101,
+      "bot_share_eur": 0.0,
+      "user_share_eur": -0.7217,
+      "exit_reason": "STOP_LOSS_PROTECTION",
+      "opened_at": "2026-11-27T03:58:12.929041+00:00",
+      "closed_at": "2026-11-27T15:57:41.919556+00:00"
+    },
     {
       "trade_id": "5c3110b9a2",
       "symbol": "SOL/EUR",
@@ -2076,6 +2082,15 @@
       "trading_cash_eur": 21.4827,
       "invested_eur": 17.6634,
       "regime_summary": "BULL_TREND"
+    },
+    {
+      "timestamp": "2026-11-27T15:57:41.919556+00:00",
+      "total_equity_eur": 38.389,
+      "user_equity_eur": 38.389,
+      "bot_vault_eur": 0.0,
+      "trading_cash_eur": 38.389,
+      "invested_eur": 0,
+      "regime_summary": "RANGE_ACCUMULATION"
     }
   ]
 }

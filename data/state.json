@@ -2,36 +2,20 @@
   "mode": "paper",
   "exchange_used": "kraken",
   "initial_capital_eur": 40.0,
-  "trading_cash_eur": 21.4827,
+  "trading_cash_eur": 38.389,
   "bot_vault_eur": 0.0,
-  "cumulative_realized_net_pnl_eur": -0.8893,
+  "cumulative_realized_net_pnl_eur": -1.611,
   "high_water_mark_pnl_eur": 0.0,
-  "cumulative_user_profit_eur": -0.8893,
+  "cumulative_user_profit_eur": -1.611,
   "peak_user_equity_eur": 40.0,
-  "cycle_count": 186,
+  "cycle_count": 187,
   "current_tier": 1,
   "current_tier_name": "Seed Explorer",
-  "last_regime_summary": "BULL_TREND",
-  "last_selected_strategy": "donchian_breakout (ETH/EUR)",
-  "last_run_at": "2026-11-27T14:52:43.528999+00:00",
-  "last_optimized_at": "2026-11-27T09:00:20.236328+00:00",
-  "positions": {
-    "ETH/EUR": {
-      "symbol": "ETH/EUR",
-      "strategy": "donchian_breakout",
-      "regime_at_entry": "RANGE_ACCUMULATION",
-      "entry_price": 1567.593405,
-      "quantity": 0.01122727,
-      "cost_eur": 17.5998,
-      "entry_fee_eur": 0.0282,
-      "stop_loss": 1541.83896,
-      "take_profit": 1621.67774,
-      "highest_price": 1595.47,
-      "trailing_atr_dist": 28.32989,
-      "opened_at": "2026-11-27T03:58:12.929041+00:00",
-      "order_id": "paper-buy-ETH/EUR"
-    }
-  },
+  "last_regime_summary": "RANGE_ACCUMULATION",
+  "last_selected_strategy": "Attesa Setup Ottimale (Cash EUR)",
+  "last_run_at": "2026-11-27T15:57:41.919556+00:00",
+  "last_optimized_at": "2026-11-27T15:57:41.919556+00:00",
+  "positions": {},
   "trade_history": [
     {
       "trade_id": "d511013107",
@@ -68,6 +52,24 @@
       "exit_reason": "STOP_LOSS_PROTECTION",
       "opened_at": "2026-11-24T01:01:46.502670+00:00",
       "closed_at": "2026-11-24T10:06:11.776769+00:00"
+    },
+    {
+      "trade_id": "a33e1444aa",
+      "symbol": "ETH/EUR",
+      "strategy": "donchian_breakout",
+      "regime": "RANGE_ACCUMULATION",
+      "entry_price": 1567.593405,
+      "exit_price": 1508.235505,
+      "quantity": 0.01122727,
+      "gross_pnl_eur": -0.6664,
+      "fees_eur": 0.0553,
+      "net_pnl_eur": -0.7217,
+      "net_pnl_pct": -0.04101,
+      "bot_share_eur": 0.0,
+      "user_share_eur": -0.7217,
+      "exit_reason": "STOP_LOSS_PROTECTION",
+      "opened_at": "2026-11-27T03:58:12.929041+00:00",
+      "closed_at": "2026-11-27T15:57:41.919556+00:00"
     }
   ],
   "equity_curve": [
@@ -1753,6 +1755,15 @@
       "trading_cash_eur": 21.4827,
       "invested_eur": 17.6634,
       "regime_summary": "BULL_TREND"
+    },
+    {
+      "timestamp": "2026-11-27T15:57:41.919556+00:00",
+      "total_equity_eur": 38.389,
+      "user_equity_eur": 38.389,
+      "bot_vault_eur": 0.0,
+      "trading_cash_eur": 38.389,
+      "invested_eur": 0,
+      "regime_summary": "RANGE_ACCUMULATION"
     }
   ]
 }
