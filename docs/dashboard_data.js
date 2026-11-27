@@ -3,9 +3,9 @@ window.BOT_DASHBOARD_DATA = {
   "version": "1.0.0",
   "mode": "paper",
   "exchange": "kraken",
-  "last_run_at": "2026-11-27T17:03:45.648469+00:00",
+  "last_run_at": "2026-11-27T17:57:05.313420+00:00",
   "last_optimized_at": "2026-11-27T15:57:41.919556+00:00",
-  "cycle_count": 188,
+  "cycle_count": 189,
   "summary": {
     "initial_capital_eur": 40.0,
     "total_ecosystem_eur": 38.39,
@@ -2094,6 +2094,15 @@ window.BOT_DASHBOARD_DATA = {
     },
     {
       "timestamp": "2026-11-27T17:03:45.648469+00:00",
+      "total_equity_eur": 38.389,
+      "user_equity_eur": 38.389,
+      "bot_vault_eur": 0.0,
+      "trading_cash_eur": 38.389,
+      "invested_eur": 0,
+      "regime_summary": "BULL_TREND"
+    },
+    {
+      "timestamp": "2026-11-27T17:57:05.313420+00:00",
       "total_equity_eur": 38.389,
       "user_equity_eur": 38.389,
       "bot_vault_eur": 0.0,
