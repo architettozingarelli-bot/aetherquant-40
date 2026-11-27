@@ -1,6 +1,6 @@
 {
-  "generation": 32,
-  "updated_at": "2026-11-27T15:57:50.287303+00:00",
+  "generation": 33,
+  "updated_at": "2026-11-27T21:53:53.377567+00:00",
   "grid_combinations_used": 12,
   "assets": {
     "BTC/EUR": {
@@ -51,9 +51,9 @@
           },
           "walk_forward_score": -1.0,
           "metrics": {
-            "in_sample_return_pct": -10.796,
-            "out_of_sample_return_pct": -1.723,
-            "profit_factor": 0.2,
+            "in_sample_return_pct": -10.051,
+            "out_of_sample_return_pct": -0.494,
+            "profit_factor": 0.41,
             "sample_trades": 14
           }
         }
@@ -88,7 +88,7 @@
             "tp_atr_mult": 4.2,
             "trail_atr_mult": 2.2
           },
-          "walk_forward_score": 0.4413,
+          "walk_forward_score": 0.3593,
           "metrics": {
             "in_sample_return_pct": 0.0,
             "out_of_sample_return_pct": 1.387,
@@ -164,9 +164,9 @@
           "walk_forward_score": -1.0,
           "metrics": {
             "in_sample_return_pct": -6.85,
-            "out_of_sample_return_pct": -3.771,
-            "profit_factor": 0.08,
-            "sample_trades": 11
+            "out_of_sample_return_pct": -2.355,
+            "profit_factor": 0.11,
+            "sample_trades": 10
           }
         }
       }
@@ -220,17 +220,17 @@
           "walk_forward_score": -1.0,
           "metrics": {
             "in_sample_return_pct": -4.15,
-            "out_of_sample_return_pct": -1.392,
-            "profit_factor": 0.06,
-            "sample_trades": 8
+            "out_of_sample_return_pct": 0.033,
+            "profit_factor": 1.25,
+            "sample_trades": 7
           }
         }
       }
     }
   },
   "recent_optimization_notes": [
-    "ETH/EUR: miglior strategia evoluta = trend_pullback (WF score +0.47)",
     "BTC/EUR: miglior strategia evoluta = donchian_breakout (WF score +0.33)",
+    "ETH/EUR: miglior strategia evoluta = trend_pullback (WF score +0.47)",
     "SOL/EUR: miglior strategia evoluta = donchian_breakout (WF score -0.15)",
     "XRP/EUR: miglior strategia evoluta = donchian_breakout (WF score +0.08)"
   ]
