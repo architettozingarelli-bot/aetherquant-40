@@ -8,12 +8,12 @@
   "high_water_mark_pnl_eur": 0.0,
   "cumulative_user_profit_eur": -1.611,
   "peak_user_equity_eur": 40.0,
-  "cycle_count": 207,
+  "cycle_count": 208,
   "current_tier": 1,
   "current_tier_name": "Seed Explorer",
-  "last_regime_summary": "BEAR_DEFENSIVE",
-  "last_selected_strategy": "Scudo Liquidità EUR (Difesa)",
-  "last_run_at": "2026-11-28T14:00:14.149459+00:00",
+  "last_regime_summary": "RANGE_ACCUMULATION",
+  "last_selected_strategy": "Attesa Setup Ottimale (Cash EUR)",
+  "last_run_at": "2026-11-28T14:46:56.529426+00:00",
   "last_optimized_at": "2026-11-28T11:46:29.251266+00:00",
   "positions": {},
   "trade_history": [
@@ -1944,6 +1944,15 @@
       "trading_cash_eur": 38.389,
       "invested_eur": 0,
       "regime_summary": "BEAR_DEFENSIVE"
+    },
+    {
+      "timestamp": "2026-11-28T14:46:56.529426+00:00",
+      "total_equity_eur": 38.389,
+      "user_equity_eur": 38.389,
+      "bot_vault_eur": 0.0,
+      "trading_cash_eur": 38.389,
+      "invested_eur": 0,
+      "regime_summary": "RANGE_ACCUMULATION"
     }
   ]
 }
