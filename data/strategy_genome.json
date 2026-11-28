@@ -1,6 +1,6 @@
 {
-  "generation": 33,
-  "updated_at": "2026-11-27T21:53:53.377567+00:00",
+  "generation": 34,
+  "updated_at": "2026-11-28T04:57:57.120761+00:00",
   "grid_combinations_used": 12,
   "assets": {
     "BTC/EUR": {
@@ -52,9 +52,9 @@
           "walk_forward_score": -1.0,
           "metrics": {
             "in_sample_return_pct": -10.051,
-            "out_of_sample_return_pct": -0.494,
-            "profit_factor": 0.41,
-            "sample_trades": 14
+            "out_of_sample_return_pct": 0.836,
+            "profit_factor": 1.23,
+            "sample_trades": 13
           }
         }
       }
@@ -108,9 +108,9 @@
           "walk_forward_score": -1.0,
           "metrics": {
             "in_sample_return_pct": -7.523,
-            "out_of_sample_return_pct": -1.61,
-            "profit_factor": 0.01,
-            "sample_trades": 9
+            "out_of_sample_return_pct": 0.0,
+            "profit_factor": 0.61,
+            "sample_trades": 8
           }
         }
       }
@@ -164,9 +164,9 @@
           "walk_forward_score": -1.0,
           "metrics": {
             "in_sample_return_pct": -6.85,
-            "out_of_sample_return_pct": -2.355,
-            "profit_factor": 0.11,
-            "sample_trades": 10
+            "out_of_sample_return_pct": -0.808,
+            "profit_factor": 0.23,
+            "sample_trades": 9
           }
         }
       }
